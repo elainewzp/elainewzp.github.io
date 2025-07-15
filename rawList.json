@@ -1,0 +1,29 @@
+[
+  {
+    "path": "/DigitalSmartBudgetSystem",
+    "coverUrl": "./covers/DigitalSmartBudgetSystem.png",
+    "title": "Digital-Smart-Budget-System",
+    "description": "Intelligent Budget and Risk Control Management System",
+    "category": "General",
+    "createDate": "2025-07-01",
+    "updateDate": "2025-07-01"
+  },
+  {
+    "path": "/ERPSystem",
+    "coverUrl": "./covers/ERPSystem.png",
+    "title": "ERP-System-and-AI-Powdered Product Selection",
+    "description": "ERP System for Inventory and Sales management & AI-powdered Product Selection",
+    "category": "General",
+    "createDate": "2025-07-01",
+    "updateDate": "2025-07-01"
+  },
+  {
+    "path": "/OneBottleOneCode",
+    "coverUrl": "./covers/OneBottleOneCode.png",
+    "title": "One Bottle One Code",
+    "description": "Integrated BC Marketing Platform Development",
+    "category": "General",
+    "createDate": "",
+    "updateDate": ""
+  }
+]
