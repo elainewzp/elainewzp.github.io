@@ -21,7 +21,7 @@ Leverage a "one bottle, one code" campaign combined with terminal promotion to e
 2. **Co-developed the data collection system** with the engineering team to capture scan activity, defined behavioral indicators based on user traits, and designed backend modules for behavior analytics, lottery draw system, rewards store, real-time dashboards, and fraud risk controls.
 3. **Achieved over 500,000 code scans** within 6 months post-launch, covering 80,000+ retail locations nationwide. Successfully broke through traditional distribution system data silos and enabled repurchase prediction models, enhancing flexible marketing strategies by region.
 
-![One Bottle One Code Digital Marketing System](./project1-digital-model-pic.png)
+![One Bottle One Code Digital Marketing System](./project1.png)
 
 ### Results
 - Significantly improved user insight coverage.

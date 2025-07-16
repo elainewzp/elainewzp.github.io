@@ -25,9 +25,9 @@
     mod
   ));
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react.development.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react.development.js"(exports, module) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react.development.js"(exports, module) {
       "use strict";
       (function() {
         function defineDeprecationWarning(methodName, info) {
@@ -965,9 +965,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/index.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/index.js
   var require_react = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/index.js"(exports, module) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -977,9 +977,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/cjs/scheduler.development.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/cjs/scheduler.development.js
   var require_scheduler_development = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
       "use strict";
       (function() {
         function performWorkUntilDeadline() {
@@ -1236,9 +1236,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/index.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/index.js
   var require_scheduler = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/index.js"(exports, module) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/scheduler/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -1248,9 +1248,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom.development.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom.development.js
   var require_react_dom_development = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
       "use strict";
       (function() {
         function noop() {
@@ -1492,9 +1492,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/index.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/index.js
   var require_react_dom = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/index.js"(exports, module) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/index.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -1505,9 +1505,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom-client.development.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom-client.development.js
   var require_react_dom_client_development = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
       "use strict";
       (function() {
         function findHook(fiber, id) {
@@ -19287,9 +19287,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/client.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/client.js
   var require_client = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/client.js"(exports, module) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-dom/client.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -19300,9 +19300,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/cookie/dist/index.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/cookie/dist/index.js
   var require_dist = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/cookie/dist/index.js"(exports) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/cookie/dist/index.js"(exports) {
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.parse = parse3;
@@ -19459,9 +19459,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react-jsx-runtime.development.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react-jsx-runtime.development.js
   var require_react_jsx_runtime_development = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
       "use strict";
       (function() {
         function getComponentNameFromType(type) {
@@ -19721,9 +19721,9 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/jsx-runtime.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/jsx-runtime.js
   var require_jsx_runtime = __commonJS({
-    "../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/jsx-runtime.js"(exports, module) {
+    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react/jsx-runtime.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -19733,14 +19733,14 @@
     }
   });
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/index.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/index.js
   var import_react11 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/template.jsx
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/template.jsx
   var import_react10 = __toESM(require_react(), 1);
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-router/dist/development/chunk-QMGIS6GS.mjs
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-router/dist/development/chunk-QMGIS6GS.mjs
   var React3 = __toESM(require_react(), 1);
   var React = __toESM(require_react(), 1);
   var React2 = __toESM(require_react(), 1);
@@ -22085,13 +22085,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     304
   ]);
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/layout.jsx
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/layout.jsx
   var import_react4 = __toESM(require_react(), 1);
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/lib/iconBase.mjs
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/lib/iconBase.mjs
   var import_react2 = __toESM(require_react(), 1);
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/lib/iconContext.mjs
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/lib/iconContext.mjs
   var import_react = __toESM(require_react(), 1);
   var DefaultContext = {
     color: void 0,
@@ -22102,7 +22102,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   };
   var IconContext = import_react.default.createContext && /* @__PURE__ */ import_react.default.createContext(DefaultContext);
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/lib/iconBase.mjs
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/lib/iconBase.mjs
   var _excluded = ["attr", "size", "title"];
   function _objectWithoutProperties(source, excluded) {
     if (source == null) return {};
@@ -22226,7 +22226,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return IconContext !== void 0 ? /* @__PURE__ */ import_react2.default.createElement(IconContext.Consumer, null, (conf) => elem(conf)) : elem(DefaultContext);
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/fi/index.mjs
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-icons/fi/index.mjs
   function FiMenu(props) {
     return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "none", "stroke": "currentColor", "strokeWidth": "2", "strokeLinecap": "round", "strokeLinejoin": "round" }, "child": [{ "tag": "line", "attr": { "x1": "3", "y1": "12", "x2": "21", "y2": "12" }, "child": [] }, { "tag": "line", "attr": { "x1": "3", "y1": "6", "x2": "21", "y2": "6" }, "child": [] }, { "tag": "line", "attr": { "x1": "3", "y1": "18", "x2": "21", "y2": "18" }, "child": [] }] })(props);
   }
@@ -22234,14 +22234,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "none", "stroke": "currentColor", "strokeWidth": "2", "strokeLinecap": "round", "strokeLinejoin": "round" }, "child": [{ "tag": "line", "attr": { "x1": "18", "y1": "6", "x2": "6", "y2": "18" }, "child": [] }, { "tag": "line", "attr": { "x1": "6", "y1": "6", "x2": "18", "y2": "18" }, "child": [] }] })(props);
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/About.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/About.js
   var import_react3 = __toESM(require_react(), 1);
   var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
   function About() {
     return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "about-markdown", dangerouslySetInnerHTML: { __html: '<h1>About Me</h1>\n<h1>Hello!</h1>\n<p>Hello! I am <strong>Zhiping</strong>, a project manager with marketing experience.</p>\n<ul>\n<li>I&#39;m currently working on <strong>an AI ski instruction product</strong>.  </li>\n<li>I\u2019m exploring <strong>AI-related products</strong> and <strong>AI marketing solutions</strong>.  </li>\n<li>\u{1F4E7} Reach me at: <a href="mailto:elainewu0427@outlook.com">elainewu0427@outlook.com</a></li>\n</ul>\n' } });
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/layout.jsx
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/layout.jsx
   var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
   function Layout({ rawList, setFilterCategory, setSortOrder, filterCategory, sortOrder }) {
     const [profileExpanded, setProfileExpanded] = (0, import_react4.useState)(false);
@@ -22286,7 +22286,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] });
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/rematrix/dist/rematrix.es.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/rematrix/dist/rematrix.es.js
   function format(source) {
     if (source.constructor !== Array) {
       throw new TypeError("Expected array.");
@@ -22359,7 +22359,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return matrix;
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/flip-toolkit/lib/index.es.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/flip-toolkit/lib/index.es.js
   var e = function(t) {
     return "number" == typeof t;
   };
@@ -22833,7 +22833,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   };
   var Y = new w();
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-flip-toolkit/lib/index.es.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-flip-toolkit/lib/index.es.js
   var import_react5 = __toESM(require_react());
   function s2() {
     return s2 = Object.assign ? Object.assign.bind() : function(e2) {
@@ -22902,7 +22902,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   };
   v2.displayName = "Flipped";
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/projectCard.jsx
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/projectCard.jsx
   var import_react6 = __toESM(require_react(), 1);
   var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
   function ProjectCard({ project }) {
@@ -22921,28 +22921,28 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     );
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/DigitalSmartBudgetSystem.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/DigitalSmartBudgetSystem.js
   var import_react7 = __toESM(require_react(), 1);
   var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
   function DigitalSmartBudgetSystem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>Digital-Smart-Budget-System</h1><h2 style="color: #4a4a4a; font-weight: normal;">Intelligent Budget and Risk Control Management System</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3><strong>Background</strong></h3>\n<pre><code>There was a serious backlog of B2B accounts receivable. The ROI of promotional funds was difficult to quantify, and manual auditing and deployment processes were inefficient. These issues led to over-budget campaigns, triggering complaints from distributors and financial disputes.\n</code></pre>\n<h3><strong>Objective</strong></h3>\n<p>Develop an integrated budgeting and risk control system embedded with a machine learning (ML) scoring model to improve fund utilization efficiency and compliance.</p>\n<h3><strong>Actions</strong></h3>\n<ul>\n<li>Cleared historical receivables and introduced third-party payment partners. Extracted transaction risk features and embedded them into the approval process.</li>\n<li>Designed a promotional budget allocation algorithm and a tracking mechanism to support year-round, category- and region-specific budget planning, enabling data-driven ROI optimization.</li>\n<li>Built a risk identification mechanism using ML models to automatically flag abnormal activities and block over-budget deployments, eliminating the risk of financial waste.</li>\n</ul>\n<p><img src="/assets/Digital-Smart-Budget-System/project2-budget-model.png" alt="Digital Budget system"></p>\n<h3><strong>Results</strong></h3>\n<ul>\n<li>Approval efficiency improved from manual review to automatic processing within 5 minutes, with a 92% accuracy rate in document authenticity verification.</li>\n<li>Resource utilization rate reached 90%, with zero complaints from marketing campaigns, enabling precise risk control and fund allocation across departments.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>Digital-Smart-Budget-System</h1><h2 style="color: #4a4a4a; font-weight: normal;">Intelligent Budget and Risk Control Management System</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3><strong>Background</strong></h3>\n<p>There was a serious backlog of B2B accounts receivable. The ROI of promotional funds was difficult to quantify, and manual auditing and deployment processes were inefficient. These issues led to over-budget campaigns, triggering complaints from distributors and financial disputes.</p>\n<h3><strong>Objective</strong></h3>\n<p>Develop an integrated budgeting and risk control system embedded with a machine learning (ML) scoring model to improve fund utilization efficiency and compliance.</p>\n<h3><strong>Actions</strong></h3>\n<ul>\n<li>Cleared historical receivables and introduced third-party payment partners. Extracted transaction risk features and embedded them into the approval process.</li>\n<li>Designed a promotional budget allocation algorithm and a tracking mechanism to support year-round, category- and region-specific budget planning, enabling data-driven ROI optimization.</li>\n<li>Built a risk identification mechanism using ML models to automatically flag abnormal activities and block over-budget deployments, eliminating the risk of financial waste.</li>\n</ul>\n<p><img src="/assets/Digital-Smart-Budget-System/project2-budget-model.png" alt="Digital Budget system"></p>\n<h3><strong>Results</strong></h3>\n<ul>\n<li>Approval efficiency improved from manual review to automatic processing within 5 minutes, with a 92% accuracy rate in document authenticity verification.</li>\n<li>Resource utilization rate reached 90%, with zero complaints from marketing campaigns, enabling precise risk control and fund allocation across departments.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/ERPSystem.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/ERPSystem.js
   var import_react8 = __toESM(require_react(), 1);
   var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
   function ERPSystem() {
     return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>ERP-System-and-AI-Powdered Product Selection</h1><h2 style="color: #4a4a4a; font-weight: normal;">ERP System for Inventory and Sales management & AI-powdered Product Selection</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3>Background</h3>\n<p>The original ERP system could not support accurate inventory forecasting or manage the cash flow cycle, leading to overstock and chaotic procurement rhythms. The manufacturing factories were unable to manage operations effectively.</p>\n<h3>Objective</h3>\n<p>Develop an ERP forecasting system that incorporates &quot;payment cycle&quot; logic to enable synchronized management of demand, sales, and capital flow.</p>\n<h3>Actions</h3>\n<ul>\n<li>Built a linked model for &quot;Procurement\u2013Warehousing\u2013Sales\u2013Payment Collection&quot; and integrated it into the ERP system for rolling annual budget forecasting.</li>\n<li>Modeled inventory turnover using time-series data at both regional and SKU levels to identify redundant stock.</li>\n</ul>\n<h3>Results</h3>\n<ul>\n<li>Improved inventory forecasting accuracy.</li>\n<li>Reduced warehousing costs by 30%.</li>\n<li>Controlled product profit margins between 20\u201330%.</li>\n</ul>\n<hr>\n<h3><strong>AI-Powered Product Selection and Brand Incubation System</strong></h3>\n<h3>Background</h3>\n<p>Product selection decisions were based on subjective judgment, and brand incubation lacked data support, resulting in inconsistent efficiency and success rates.</p>\n<h3>Objective</h3>\n<p>Establish a data-driven product selection system and utilize AI to assist in new product entry and brand positioning.</p>\n<h3>Actions</h3>\n<ul>\n<li>Designed a product selection SOP incorporating multi-factor scoring models using warehousing turnover rate, ROI, and regional demand heat.</li>\n<li>Built a popularity prediction model using Python to assist with SKU mix optimization.</li>\n<li>Developed an NLP-based sentiment analysis model to interpret user reviews and differentiate competitors, aiding OEM strategy.</li>\n</ul>\n<p><img src="/assets/ERP-system/project34.png" alt="ERP system"></p>\n<h3>Results</h3>\n<ul>\n<li>Improved product selection efficiency by 30%.</li>\n<li>Successfully launched 2 self-developed brands.</li>\n<li>Achieved 20% profit margin on individual SKUs.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/OneBottleOneCode.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/OneBottleOneCode.js
   var import_react9 = __toESM(require_react(), 1);
   var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
   function OneBottleOneCode() {
-    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>One Bottle One Code</h1><h2 style="color: #4a4a4a; font-weight: normal;">Integrated BC Marketing Platform Development</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3>Background</h3>\n<p>Traditional terminal marketing lacked clear touchpoints and user behavior data, resulting in inefficient advertising spend and poor targeting. The project had been stagnant for years.</p>\n<h3>Objective</h3>\n<p>Leverage a &quot;one bottle, one code&quot; campaign combined with terminal promotion to enable precise, multi-regional deployment. The goal was to increase GMV and repurchase rates, improve terminal data visualization, and enable user journey tracking and repurchase modeling.</p>\n<h3>Actions</h3>\n<ol>\n<li><strong>Led the marketing-side product management</strong> of the &quot;One Product, One Code&quot; system development and deployment. Designed business logic and interaction flow, and coordinated cross-functional teams including Production, IT, Branding, Legal, and Warehousing to build the traceable code platform.</li>\n<li><strong>Co-developed the data collection system</strong> with the engineering team to capture scan activity, defined behavioral indicators based on user traits, and designed backend modules for behavior analytics, lottery draw system, rewards store, real-time dashboards, and fraud risk controls.</li>\n<li><strong>Achieved over 500,000 code scans</strong> within 6 months post-launch, covering 80,000+ retail locations nationwide. Successfully broke through traditional distribution system data silos and enabled repurchase prediction models, enhancing flexible marketing strategies by region.</li>\n</ol>\n<p><img src="/assets/One-bottle-one-code/project1-digital-model-pic.png" alt="One Bottle One Code Digital Marketing System"></p>\n<h3>Results</h3>\n<ul>\n<li>Significantly improved user insight coverage.</li>\n<li>Achieved 90% accuracy in data path analysis.</li>\n<li>Delivered high-quality data input to support scaled distributor management, GMV growth on the consumer side, and company-wide digital transformation.</li>\n<li>First company in the seasoning industry to successfully implement and go live with a product-code traceability platform.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>One Bottle One Code</h1><h2 style="color: #4a4a4a; font-weight: normal;">Integrated BC Marketing Platform Development</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3>Background</h3>\n<p>Traditional terminal marketing lacked clear touchpoints and user behavior data, resulting in inefficient advertising spend and poor targeting. The project had been stagnant for years.</p>\n<h3>Objective</h3>\n<p>Leverage a &quot;one bottle, one code&quot; campaign combined with terminal promotion to enable precise, multi-regional deployment. The goal was to increase GMV and repurchase rates, improve terminal data visualization, and enable user journey tracking and repurchase modeling.</p>\n<h3>Actions</h3>\n<ol>\n<li><strong>Led the marketing-side product management</strong> of the &quot;One Product, One Code&quot; system development and deployment. Designed business logic and interaction flow, and coordinated cross-functional teams including Production, IT, Branding, Legal, and Warehousing to build the traceable code platform.</li>\n<li><strong>Co-developed the data collection system</strong> with the engineering team to capture scan activity, defined behavioral indicators based on user traits, and designed backend modules for behavior analytics, lottery draw system, rewards store, real-time dashboards, and fraud risk controls.</li>\n<li><strong>Achieved over 500,000 code scans</strong> within 6 months post-launch, covering 80,000+ retail locations nationwide. Successfully broke through traditional distribution system data silos and enabled repurchase prediction models, enhancing flexible marketing strategies by region.</li>\n</ol>\n<p><img src="/assets/One-bottle-one-code/project1.png" alt="One Bottle One Code Digital Marketing System"></p>\n<h3>Results</h3>\n<ul>\n<li>Significantly improved user insight coverage.</li>\n<li>Achieved 90% accuracy in data path analysis.</li>\n<li>Delivered high-quality data input to support scaled distributor management, GMV growth on the consumer side, and company-wide digital transformation.</li>\n<li>First company in the seasoning industry to successfully implement and go live with a product-code traceability platform.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pageMap.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pageMap.js
   var pageMap = {
     "/DigitalSmartBudgetSystem": DigitalSmartBudgetSystem,
     "/ERPSystem": ERPSystem,
@@ -22950,7 +22950,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   };
   var pageMap_default = pageMap;
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/template.jsx
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/template.jsx
   var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
   function App() {
     const [rawList, setRawList] = (0, import_react10.useState)([]);
@@ -23015,7 +23015,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ) }) }) });
   }
 
-  // ../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/index.js
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/index.js
   var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
   var root = import_client.default.createRoot(document.getElementById("root"));
   root.render(
