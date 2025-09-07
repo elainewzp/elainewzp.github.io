@@ -536,13 +536,16 @@
           return null;
         };
         deprecatedAPIs = {
-          "react-stack-bottom-frame": function(callStackForError) {
+          react_stack_bottom_frame: function(callStackForError) {
             return callStackForError();
           }
         };
         var specialPropKeyWarningShown, didWarnAboutOldJSXRuntime;
         var didWarnAboutElementRef = {};
-        var unknownOwnerDebugStack = deprecatedAPIs["react-stack-bottom-frame"].bind(deprecatedAPIs, UnknownOwner)();
+        var unknownOwnerDebugStack = deprecatedAPIs.react_stack_bottom_frame.bind(
+          deprecatedAPIs,
+          UnknownOwner
+        )();
         var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
         var didWarnAboutMaps = false, userProvidedKeyEscapeRegex = /\/+/g, reportGlobalError = "function" === typeof reportError ? reportError : function(error) {
           if ("object" === typeof window && "function" === typeof window.ErrorEvent) {
@@ -959,7 +962,7 @@
         exports.useTransition = function() {
           return resolveDispatcher().useTransition();
         };
-        exports.version = "19.1.0";
+        exports.version = "19.1.1";
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
       })();
     }
@@ -1297,7 +1300,7 @@
           return dispatcher;
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var React24 = require_react(), Internals = {
+        var React23 = require_react(), Internals = {
           d: {
             f: noop,
             r: function() {
@@ -1315,7 +1318,7 @@
           },
           p: 0,
           findDOMNode: null
-        }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React24.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+        }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React23.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
         "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
           "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
         );
@@ -1337,8 +1340,8 @@
             );
           }
         };
-        exports.preconnect = function(href2, options) {
-          "string" === typeof href2 && href2 ? null != options && "object" !== typeof options ? console.error(
+        exports.preconnect = function(href, options) {
+          "string" === typeof href && href ? null != options && "object" !== typeof options ? console.error(
             "ReactDOM.preconnect(): Expected the `options` argument (second) to be an object but encountered %s instead. The only supported option at this time is `crossOrigin` which accepts a string.",
             getValueDescriptorExpectingEnumForWarning(options)
           ) : null != options && "string" !== typeof options.crossOrigin && console.error(
@@ -1346,15 +1349,15 @@
             getValueDescriptorExpectingObjectForWarning(options.crossOrigin)
           ) : console.error(
             "ReactDOM.preconnect(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.",
-            getValueDescriptorExpectingObjectForWarning(href2)
+            getValueDescriptorExpectingObjectForWarning(href)
           );
-          "string" === typeof href2 && (options ? (options = options.crossOrigin, options = "string" === typeof options ? "use-credentials" === options ? options : "" : void 0) : options = null, Internals.d.C(href2, options));
+          "string" === typeof href && (options ? (options = options.crossOrigin, options = "string" === typeof options ? "use-credentials" === options ? options : "" : void 0) : options = null, Internals.d.C(href, options));
         };
-        exports.prefetchDNS = function(href2) {
-          if ("string" !== typeof href2 || !href2)
+        exports.prefetchDNS = function(href) {
+          if ("string" !== typeof href || !href)
             console.error(
               "ReactDOM.prefetchDNS(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.",
-              getValueDescriptorExpectingObjectForWarning(href2)
+              getValueDescriptorExpectingObjectForWarning(href)
             );
           else if (1 < arguments.length) {
             var options = arguments[1];
@@ -1366,10 +1369,10 @@
               getValueDescriptorExpectingEnumForWarning(options)
             );
           }
-          "string" === typeof href2 && Internals.d.D(href2);
+          "string" === typeof href && Internals.d.D(href);
         };
-        exports.preinit = function(href2, options) {
-          "string" === typeof href2 && href2 ? null == options || "object" !== typeof options ? console.error(
+        exports.preinit = function(href, options) {
+          "string" === typeof href && href ? null == options || "object" !== typeof options ? console.error(
             "ReactDOM.preinit(): Expected the `options` argument (second) to be an object with an `as` property describing the type of resource to be preinitialized but encountered %s instead.",
             getValueDescriptorExpectingEnumForWarning(options)
           ) : "style" !== options.as && "script" !== options.as && console.error(
@@ -1377,19 +1380,19 @@
             getValueDescriptorExpectingEnumForWarning(options.as)
           ) : console.error(
             "ReactDOM.preinit(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.",
-            getValueDescriptorExpectingObjectForWarning(href2)
+            getValueDescriptorExpectingObjectForWarning(href)
           );
-          if ("string" === typeof href2 && options && "string" === typeof options.as) {
+          if ("string" === typeof href && options && "string" === typeof options.as) {
             var as = options.as, crossOrigin = getCrossOriginStringAs(as, options.crossOrigin), integrity = "string" === typeof options.integrity ? options.integrity : void 0, fetchPriority = "string" === typeof options.fetchPriority ? options.fetchPriority : void 0;
             "style" === as ? Internals.d.S(
-              href2,
+              href,
               "string" === typeof options.precedence ? options.precedence : void 0,
               {
                 crossOrigin,
                 integrity,
                 fetchPriority
               }
-            ) : "script" === as && Internals.d.X(href2, {
+            ) : "script" === as && Internals.d.X(href, {
               crossOrigin,
               integrity,
               fetchPriority,
@@ -1397,9 +1400,9 @@
             });
           }
         };
-        exports.preinitModule = function(href2, options) {
+        exports.preinitModule = function(href, options) {
           var encountered = "";
-          "string" === typeof href2 && href2 || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href2) + ".");
+          "string" === typeof href && href || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href) + ".");
           void 0 !== options && "object" !== typeof options ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options) + "." : options && "as" in options && "script" !== options.as && (encountered += " The `as` option encountered was " + getValueDescriptorExpectingEnumForWarning(options.as) + ".");
           if (encountered)
             console.error(
@@ -1414,37 +1417,37 @@
                 encountered = getValueDescriptorExpectingEnumForWarning(encountered), console.error(
                   'ReactDOM.preinitModule(): Currently the only supported "as" type for this function is "script" but received "%s" instead. This warning was generated for `href` "%s". In the future other module types will be supported, aligning with the import-attributes proposal. Learn more here: (https://github.com/tc39/proposal-import-attributes)',
                   encountered,
-                  href2
+                  href
                 );
             }
-          if ("string" === typeof href2)
+          if ("string" === typeof href)
             if ("object" === typeof options && null !== options) {
               if (null == options.as || "script" === options.as)
                 encountered = getCrossOriginStringAs(
                   options.as,
                   options.crossOrigin
-                ), Internals.d.M(href2, {
+                ), Internals.d.M(href, {
                   crossOrigin: encountered,
                   integrity: "string" === typeof options.integrity ? options.integrity : void 0,
                   nonce: "string" === typeof options.nonce ? options.nonce : void 0
                 });
-            } else null == options && Internals.d.M(href2);
+            } else null == options && Internals.d.M(href);
         };
-        exports.preload = function(href2, options) {
+        exports.preload = function(href, options) {
           var encountered = "";
-          "string" === typeof href2 && href2 || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href2) + ".");
+          "string" === typeof href && href || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href) + ".");
           null == options || "object" !== typeof options ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options) + "." : "string" === typeof options.as && options.as || (encountered += " The `as` option encountered was " + getValueDescriptorExpectingObjectForWarning(options.as) + ".");
           encountered && console.error(
             'ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s',
             encountered
           );
-          if ("string" === typeof href2 && "object" === typeof options && null !== options && "string" === typeof options.as) {
+          if ("string" === typeof href && "object" === typeof options && null !== options && "string" === typeof options.as) {
             encountered = options.as;
             var crossOrigin = getCrossOriginStringAs(
               encountered,
               options.crossOrigin
             );
-            Internals.d.L(href2, encountered, {
+            Internals.d.L(href, encountered, {
               crossOrigin,
               integrity: "string" === typeof options.integrity ? options.integrity : void 0,
               nonce: "string" === typeof options.nonce ? options.nonce : void 0,
@@ -1457,22 +1460,22 @@
             });
           }
         };
-        exports.preloadModule = function(href2, options) {
+        exports.preloadModule = function(href, options) {
           var encountered = "";
-          "string" === typeof href2 && href2 || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href2) + ".");
+          "string" === typeof href && href || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href) + ".");
           void 0 !== options && "object" !== typeof options ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options) + "." : options && "as" in options && "string" !== typeof options.as && (encountered += " The `as` option encountered was " + getValueDescriptorExpectingObjectForWarning(options.as) + ".");
           encountered && console.error(
             'ReactDOM.preloadModule(): Expected two arguments, a non-empty `href` string and, optionally, an `options` object with an `as` property valid for a `<link rel="modulepreload" as="..." />` tag.%s',
             encountered
           );
-          "string" === typeof href2 && (options ? (encountered = getCrossOriginStringAs(
+          "string" === typeof href && (options ? (encountered = getCrossOriginStringAs(
             options.as,
             options.crossOrigin
-          ), Internals.d.m(href2, {
+          ), Internals.d.m(href, {
             as: "string" === typeof options.as && "script" !== options.as ? options.as : void 0,
             crossOrigin: encountered,
             integrity: "string" === typeof options.integrity ? options.integrity : void 0
-          })) : Internals.d.m(href2));
+          })) : Internals.d.m(href));
         };
         exports.requestFormReset = function(form) {
           Internals.d.r(form);
@@ -1486,7 +1489,7 @@
         exports.useFormStatus = function() {
           return resolveDispatcher().useHostTransitionStatus();
         };
-        exports.version = "19.1.0";
+        exports.version = "19.1.1";
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
       })();
     }
@@ -2587,7 +2590,7 @@
           error.startsWith("Error: react-stack-top-frame\n") && (error = error.slice(29));
           prevPrepareStackTrace = error.indexOf("\n");
           -1 !== prevPrepareStackTrace && (error = error.slice(prevPrepareStackTrace + 1));
-          prevPrepareStackTrace = error.indexOf("react-stack-bottom-frame");
+          prevPrepareStackTrace = error.indexOf("react_stack_bottom_frame");
           -1 !== prevPrepareStackTrace && (prevPrepareStackTrace = error.lastIndexOf(
             "\n",
             prevPrepareStackTrace
@@ -2857,7 +2860,7 @@
           "number" === type && getActiveElement(node.ownerDocument) === node || node.defaultValue === "" + value || (node.defaultValue = "" + value);
         }
         function validateOptionProps(element, props) {
-          null == props.value && ("object" === typeof props.children && null !== props.children ? React24.Children.forEach(props.children, function(child) {
+          null == props.value && ("object" === typeof props.children && null !== props.children ? React23.Children.forEach(props.children, function(child) {
             null == child || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || didWarnInvalidChild || (didWarnInvalidChild = true, console.error(
               "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
             ));
@@ -15460,13 +15463,13 @@
         function getHoistableRoot(container) {
           return "function" === typeof container.getRootNode ? container.getRootNode() : 9 === container.nodeType ? container : container.ownerDocument;
         }
-        function preconnectAs(rel, href2, crossOrigin) {
+        function preconnectAs(rel, href, crossOrigin) {
           var ownerDocument = globalDocument;
-          if (ownerDocument && "string" === typeof href2 && href2) {
-            var limitedEscapedHref = escapeSelectorAttributeValueInsideDoubleQuotes(href2);
+          if (ownerDocument && "string" === typeof href && href) {
+            var limitedEscapedHref = escapeSelectorAttributeValueInsideDoubleQuotes(href);
             limitedEscapedHref = 'link[rel="' + rel + '"][href="' + limitedEscapedHref + '"]';
             "string" === typeof crossOrigin && (limitedEscapedHref += '[crossorigin="' + crossOrigin + '"]');
-            preconnectsSet.has(limitedEscapedHref) || (preconnectsSet.add(limitedEscapedHref), rel = { rel, crossOrigin, href: href2 }, null === ownerDocument.querySelector(limitedEscapedHref) && (href2 = ownerDocument.createElement("link"), setInitialProperties(href2, "link", rel), markNodeAsHoistable(href2), ownerDocument.head.appendChild(href2)));
+            preconnectsSet.has(limitedEscapedHref) || (preconnectsSet.add(limitedEscapedHref), rel = { rel, crossOrigin, href }, null === ownerDocument.querySelector(limitedEscapedHref) && (href = ownerDocument.createElement("link"), setInitialProperties(href, "link", rel), markNodeAsHoistable(href), ownerDocument.head.appendChild(href)));
           }
         }
         function getResource(type, currentProps, pendingProps, currentResource) {
@@ -15548,8 +15551,8 @@
           Object.getOwnPropertyNames(props).length > describedProps && (description += " ...");
           return description + " />";
         }
-        function getStyleKey(href2) {
-          return 'href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href2) + '"';
+        function getStyleKey(href) {
+          return 'href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href) + '"';
         }
         function getStylesheetSelectorFromKey(key) {
           return 'link[rel="stylesheet"][' + key + "]";
@@ -16439,14 +16442,14 @@
           ));
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var Scheduler = require_scheduler(), React24 = require_react(), ReactDOM2 = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy");
+        var Scheduler = require_scheduler(), React23 = require_react(), ReactDOM2 = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy");
         Symbol.for("react.scope");
         var REACT_ACTIVITY_TYPE = Symbol.for("react.activity");
         Symbol.for("react.legacy_hidden");
         Symbol.for("react.tracing_marker");
         var REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel");
         Symbol.for("react.view_transition");
-        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React24.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React23.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
           pending: false,
           data: null,
           method: null,
@@ -18643,7 +18646,7 @@
           }
         };
         var callComponent = {
-          "react-stack-bottom-frame": function(Component4, props, secondArg) {
+          react_stack_bottom_frame: function(Component4, props, secondArg) {
             var wasRendering = isRendering;
             isRendering = true;
             try {
@@ -18652,8 +18655,8 @@
               isRendering = wasRendering;
             }
           }
-        }, callComponentInDEV = callComponent["react-stack-bottom-frame"].bind(callComponent), callRender = {
-          "react-stack-bottom-frame": function(instance) {
+        }, callComponentInDEV = callComponent.react_stack_bottom_frame.bind(callComponent), callRender = {
+          react_stack_bottom_frame: function(instance) {
             var wasRendering = isRendering;
             isRendering = true;
             try {
@@ -18662,39 +18665,47 @@
               isRendering = wasRendering;
             }
           }
-        }, callRenderInDEV = callRender["react-stack-bottom-frame"].bind(callRender), callComponentDidMount = {
-          "react-stack-bottom-frame": function(finishedWork, instance) {
+        }, callRenderInDEV = callRender.react_stack_bottom_frame.bind(callRender), callComponentDidMount = {
+          react_stack_bottom_frame: function(finishedWork, instance) {
             try {
               instance.componentDidMount();
             } catch (error) {
               captureCommitPhaseError(finishedWork, finishedWork.return, error);
             }
           }
-        }, callComponentDidMountInDEV = callComponentDidMount["react-stack-bottom-frame"].bind(callComponentDidMount), callComponentDidUpdate = {
-          "react-stack-bottom-frame": function(finishedWork, instance, prevProps, prevState, snapshot) {
+        }, callComponentDidMountInDEV = callComponentDidMount.react_stack_bottom_frame.bind(
+          callComponentDidMount
+        ), callComponentDidUpdate = {
+          react_stack_bottom_frame: function(finishedWork, instance, prevProps, prevState, snapshot) {
             try {
               instance.componentDidUpdate(prevProps, prevState, snapshot);
             } catch (error) {
               captureCommitPhaseError(finishedWork, finishedWork.return, error);
             }
           }
-        }, callComponentDidUpdateInDEV = callComponentDidUpdate["react-stack-bottom-frame"].bind(callComponentDidUpdate), callComponentDidCatch = {
-          "react-stack-bottom-frame": function(instance, errorInfo) {
+        }, callComponentDidUpdateInDEV = callComponentDidUpdate.react_stack_bottom_frame.bind(
+          callComponentDidUpdate
+        ), callComponentDidCatch = {
+          react_stack_bottom_frame: function(instance, errorInfo) {
             var stack = errorInfo.stack;
             instance.componentDidCatch(errorInfo.value, {
               componentStack: null !== stack ? stack : ""
             });
           }
-        }, callComponentDidCatchInDEV = callComponentDidCatch["react-stack-bottom-frame"].bind(callComponentDidCatch), callComponentWillUnmount = {
-          "react-stack-bottom-frame": function(current2, nearestMountedAncestor, instance) {
+        }, callComponentDidCatchInDEV = callComponentDidCatch.react_stack_bottom_frame.bind(
+          callComponentDidCatch
+        ), callComponentWillUnmount = {
+          react_stack_bottom_frame: function(current2, nearestMountedAncestor, instance) {
             try {
               instance.componentWillUnmount();
             } catch (error) {
               captureCommitPhaseError(current2, nearestMountedAncestor, error);
             }
           }
-        }, callComponentWillUnmountInDEV = callComponentWillUnmount["react-stack-bottom-frame"].bind(callComponentWillUnmount), callCreate = {
-          "react-stack-bottom-frame": function(effect) {
+        }, callComponentWillUnmountInDEV = callComponentWillUnmount.react_stack_bottom_frame.bind(
+          callComponentWillUnmount
+        ), callCreate = {
+          react_stack_bottom_frame: function(effect) {
             null != effect.resourceKind && console.error(
               "Expected only SimpleEffects when enableUseEffectCRUDOverload is disabled, got %s",
               effect.resourceKind
@@ -18704,20 +18715,20 @@
             create = create();
             return effect.destroy = create;
           }
-        }, callCreateInDEV = callCreate["react-stack-bottom-frame"].bind(callCreate), callDestroy = {
-          "react-stack-bottom-frame": function(current2, nearestMountedAncestor, destroy) {
+        }, callCreateInDEV = callCreate.react_stack_bottom_frame.bind(callCreate), callDestroy = {
+          react_stack_bottom_frame: function(current2, nearestMountedAncestor, destroy) {
             try {
               destroy();
             } catch (error) {
               captureCommitPhaseError(current2, nearestMountedAncestor, error);
             }
           }
-        }, callDestroyInDEV = callDestroy["react-stack-bottom-frame"].bind(callDestroy), callLazyInit = {
-          "react-stack-bottom-frame": function(lazy2) {
+        }, callDestroyInDEV = callDestroy.react_stack_bottom_frame.bind(callDestroy), callLazyInit = {
+          react_stack_bottom_frame: function(lazy2) {
             var init = lazy2._init;
             return init(lazy2._payload);
           }
-        }, callLazyInitInDEV = callLazyInit["react-stack-bottom-frame"].bind(callLazyInit), thenableState = null, thenableIndexCounter = 0, currentDebugInfo = null, didWarnAboutMaps;
+        }, callLazyInitInDEV = callLazyInit.react_stack_bottom_frame.bind(callLazyInit), thenableState = null, thenableIndexCounter = 0, currentDebugInfo = null, didWarnAboutMaps;
         var didWarnAboutGenerators = didWarnAboutMaps = false;
         var ownerHasKeyUseWarning = {};
         var ownerHasFunctionTypeWarning = {};
@@ -18911,49 +18922,49 @@
             var formInst = getInstanceFromNode(form);
             null !== formInst && 5 === formInst.tag && "form" === formInst.type ? requestFormReset$1(formInst) : previousDispatcher.r(form);
           },
-          D: function(href2) {
-            previousDispatcher.D(href2);
-            preconnectAs("dns-prefetch", href2, null);
+          D: function(href) {
+            previousDispatcher.D(href);
+            preconnectAs("dns-prefetch", href, null);
           },
-          C: function(href2, crossOrigin) {
-            previousDispatcher.C(href2, crossOrigin);
-            preconnectAs("preconnect", href2, crossOrigin);
+          C: function(href, crossOrigin) {
+            previousDispatcher.C(href, crossOrigin);
+            preconnectAs("preconnect", href, crossOrigin);
           },
-          L: function(href2, as, options) {
-            previousDispatcher.L(href2, as, options);
+          L: function(href, as, options) {
+            previousDispatcher.L(href, as, options);
             var ownerDocument = globalDocument;
-            if (ownerDocument && href2 && as) {
+            if (ownerDocument && href && as) {
               var preloadSelector = 'link[rel="preload"][as="' + escapeSelectorAttributeValueInsideDoubleQuotes(as) + '"]';
               "image" === as ? options && options.imageSrcSet ? (preloadSelector += '[imagesrcset="' + escapeSelectorAttributeValueInsideDoubleQuotes(
                 options.imageSrcSet
               ) + '"]', "string" === typeof options.imageSizes && (preloadSelector += '[imagesizes="' + escapeSelectorAttributeValueInsideDoubleQuotes(
                 options.imageSizes
-              ) + '"]')) : preloadSelector += '[href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href2) + '"]' : preloadSelector += '[href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href2) + '"]';
+              ) + '"]')) : preloadSelector += '[href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href) + '"]' : preloadSelector += '[href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href) + '"]';
               var key = preloadSelector;
               switch (as) {
                 case "style":
-                  key = getStyleKey(href2);
+                  key = getStyleKey(href);
                   break;
                 case "script":
-                  key = getScriptKey(href2);
+                  key = getScriptKey(href);
               }
-              preloadPropsMap.has(key) || (href2 = assign(
+              preloadPropsMap.has(key) || (href = assign(
                 {
                   rel: "preload",
-                  href: "image" === as && options && options.imageSrcSet ? void 0 : href2,
+                  href: "image" === as && options && options.imageSrcSet ? void 0 : href,
                   as
                 },
                 options
-              ), preloadPropsMap.set(key, href2), null !== ownerDocument.querySelector(preloadSelector) || "style" === as && ownerDocument.querySelector(
+              ), preloadPropsMap.set(key, href), null !== ownerDocument.querySelector(preloadSelector) || "style" === as && ownerDocument.querySelector(
                 getStylesheetSelectorFromKey(key)
-              ) || "script" === as && ownerDocument.querySelector(getScriptSelectorFromKey(key)) || (as = ownerDocument.createElement("link"), setInitialProperties(as, "link", href2), markNodeAsHoistable(as), ownerDocument.head.appendChild(as)));
+              ) || "script" === as && ownerDocument.querySelector(getScriptSelectorFromKey(key)) || (as = ownerDocument.createElement("link"), setInitialProperties(as, "link", href), markNodeAsHoistable(as), ownerDocument.head.appendChild(as)));
             }
           },
-          m: function(href2, options) {
-            previousDispatcher.m(href2, options);
+          m: function(href, options) {
+            previousDispatcher.m(href, options);
             var ownerDocument = globalDocument;
-            if (ownerDocument && href2) {
-              var as = options && "string" === typeof options.as ? options.as : "script", preloadSelector = 'link[rel="modulepreload"][as="' + escapeSelectorAttributeValueInsideDoubleQuotes(as) + '"][href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href2) + '"]', key = preloadSelector;
+            if (ownerDocument && href) {
+              var as = options && "string" === typeof options.as ? options.as : "script", preloadSelector = 'link[rel="modulepreload"][as="' + escapeSelectorAttributeValueInsideDoubleQuotes(as) + '"][href="' + escapeSelectorAttributeValueInsideDoubleQuotes(href) + '"]', key = preloadSelector;
               switch (as) {
                 case "audioworklet":
                 case "paintworklet":
@@ -18961,9 +18972,9 @@
                 case "sharedworker":
                 case "worker":
                 case "script":
-                  key = getScriptKey(href2);
+                  key = getScriptKey(href);
               }
-              if (!preloadPropsMap.has(key) && (href2 = assign({ rel: "modulepreload", href: href2 }, options), preloadPropsMap.set(key, href2), null === ownerDocument.querySelector(preloadSelector))) {
+              if (!preloadPropsMap.has(key) && (href = assign({ rel: "modulepreload", href }, options), preloadPropsMap.set(key, href), null === ownerDocument.querySelector(preloadSelector))) {
                 switch (as) {
                   case "audioworklet":
                   case "paintworklet":
@@ -18975,7 +18986,7 @@
                       return;
                 }
                 as = ownerDocument.createElement("link");
-                setInitialProperties(as, "link", href2);
+                setInitialProperties(as, "link", href);
                 markNodeAsHoistable(as);
                 ownerDocument.head.appendChild(as);
               }
@@ -18996,11 +19007,11 @@
               }, scripts.set(key, resource));
             }
           },
-          S: function(href2, precedence, options) {
-            previousDispatcher.S(href2, precedence, options);
+          S: function(href, precedence, options) {
+            previousDispatcher.S(href, precedence, options);
             var ownerDocument = globalDocument;
-            if (ownerDocument && href2) {
-              var styles = getResourcesFromRoot(ownerDocument).hoistableStyles, key = getStyleKey(href2);
+            if (ownerDocument && href) {
+              var styles = getResourcesFromRoot(ownerDocument).hoistableStyles, key = getStyleKey(href);
               precedence = precedence || "default";
               var resource = styles.get(key);
               if (!resource) {
@@ -19010,18 +19021,18 @@
                 ))
                   state.loading = Loaded | Inserted;
                 else {
-                  href2 = assign(
+                  href = assign(
                     {
                       rel: "stylesheet",
-                      href: href2,
+                      href,
                       "data-precedence": precedence
                     },
                     options
                   );
-                  (options = preloadPropsMap.get(key)) && adoptPreloadPropsForStylesheet(href2, options);
+                  (options = preloadPropsMap.get(key)) && adoptPreloadPropsForStylesheet(href, options);
                   var link = resource = ownerDocument.createElement("link");
                   markNodeAsHoistable(link);
-                  setInitialProperties(link, "link", href2);
+                  setInitialProperties(link, "link", href);
                   link._p = new Promise(function(resolve, reject) {
                     link.onload = resolve;
                     link.onerror = reject;
@@ -19160,10 +19171,10 @@
           }
         };
         (function() {
-          var isomorphicReactPackageVersion = React24.version;
-          if ("19.1.0" !== isomorphicReactPackageVersion)
+          var isomorphicReactPackageVersion = React23.version;
+          if ("19.1.1" !== isomorphicReactPackageVersion)
             throw Error(
-              'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.1.0\nLearn more: https://react.dev/warnings/version-mismatch")
+              'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.1.1\nLearn more: https://react.dev/warnings/version-mismatch")
             );
         })();
         "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
@@ -19184,13 +19195,13 @@
           componentOrElement = null === componentOrElement ? null : componentOrElement.stateNode;
           return componentOrElement;
         };
-        if (!function() {
+        if (!(function() {
           var internals = {
             bundleType: 1,
-            version: "19.1.0",
+            version: "19.1.1",
             rendererPackageName: "react-dom",
             currentDispatcherRef: ReactSharedInternals,
-            reconcilerVersion: "19.1.0"
+            reconcilerVersion: "19.1.1"
           };
           internals.overrideHookState = overrideHookState;
           internals.overrideHookStateDeletePath = overrideHookStateDeletePath;
@@ -19208,7 +19219,7 @@
           internals.getLaneLabelMap = getLaneLabelMap;
           internals.injectProfilingHooks = injectProfilingHooks;
           return injectInternals(internals);
-        }() && canUseDOM && window.top === window.self && (-1 < navigator.userAgent.indexOf("Chrome") && -1 === navigator.userAgent.indexOf("Edge") || -1 < navigator.userAgent.indexOf("Firefox"))) {
+        })() && canUseDOM && window.top === window.self && (-1 < navigator.userAgent.indexOf("Chrome") && -1 === navigator.userAgent.indexOf("Edge") || -1 < navigator.userAgent.indexOf("Firefox"))) {
           var protocol = window.location.protocol;
           /^(https?|file):$/.test(protocol) && console.info(
             "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools" + ("file:" === protocol ? "\nYou might need to use a local HTTP server (instead of file://): https://react.dev/link/react-devtools-faq" : ""),
@@ -19281,7 +19292,7 @@
           listenToAllSupportedEvents(container);
           return new ReactDOMHydrationRoot(initialChildren);
         };
-        exports.version = "19.1.0";
+        exports.version = "19.1.1";
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
       })();
     }
@@ -19296,165 +19307,6 @@
         module.exports = null;
       } else {
         module.exports = require_react_dom_client_development();
-      }
-    }
-  });
-
-  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/cookie/dist/index.js
-  var require_dist = __commonJS({
-    "../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/cookie/dist/index.js"(exports) {
-      "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.parse = parse3;
-      exports.serialize = serialize2;
-      var cookieNameRegExp = /^[\u0021-\u003A\u003C\u003E-\u007E]+$/;
-      var cookieValueRegExp = /^[\u0021-\u003A\u003C-\u007E]*$/;
-      var domainValueRegExp = /^([.]?[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)([.][a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*$/i;
-      var pathValueRegExp = /^[\u0020-\u003A\u003D-\u007E]*$/;
-      var __toString = Object.prototype.toString;
-      var NullObject = /* @__PURE__ */ (() => {
-        const C2 = function() {
-        };
-        C2.prototype = /* @__PURE__ */ Object.create(null);
-        return C2;
-      })();
-      function parse3(str, options) {
-        const obj = new NullObject();
-        const len = str.length;
-        if (len < 2)
-          return obj;
-        const dec = options?.decode || decode;
-        let index = 0;
-        do {
-          const eqIdx = str.indexOf("=", index);
-          if (eqIdx === -1)
-            break;
-          const colonIdx = str.indexOf(";", index);
-          const endIdx = colonIdx === -1 ? len : colonIdx;
-          if (eqIdx > endIdx) {
-            index = str.lastIndexOf(";", eqIdx - 1) + 1;
-            continue;
-          }
-          const keyStartIdx = startIndex(str, index, eqIdx);
-          const keyEndIdx = endIndex(str, eqIdx, keyStartIdx);
-          const key = str.slice(keyStartIdx, keyEndIdx);
-          if (obj[key] === void 0) {
-            let valStartIdx = startIndex(str, eqIdx + 1, endIdx);
-            let valEndIdx = endIndex(str, endIdx, valStartIdx);
-            const value = dec(str.slice(valStartIdx, valEndIdx));
-            obj[key] = value;
-          }
-          index = endIdx + 1;
-        } while (index < len);
-        return obj;
-      }
-      function startIndex(str, index, max) {
-        do {
-          const code = str.charCodeAt(index);
-          if (code !== 32 && code !== 9)
-            return index;
-        } while (++index < max);
-        return max;
-      }
-      function endIndex(str, index, min) {
-        while (index > min) {
-          const code = str.charCodeAt(--index);
-          if (code !== 32 && code !== 9)
-            return index + 1;
-        }
-        return min;
-      }
-      function serialize2(name, val, options) {
-        const enc = options?.encode || encodeURIComponent;
-        if (!cookieNameRegExp.test(name)) {
-          throw new TypeError(`argument name is invalid: ${name}`);
-        }
-        const value = enc(val);
-        if (!cookieValueRegExp.test(value)) {
-          throw new TypeError(`argument val is invalid: ${val}`);
-        }
-        let str = name + "=" + value;
-        if (!options)
-          return str;
-        if (options.maxAge !== void 0) {
-          if (!Number.isInteger(options.maxAge)) {
-            throw new TypeError(`option maxAge is invalid: ${options.maxAge}`);
-          }
-          str += "; Max-Age=" + options.maxAge;
-        }
-        if (options.domain) {
-          if (!domainValueRegExp.test(options.domain)) {
-            throw new TypeError(`option domain is invalid: ${options.domain}`);
-          }
-          str += "; Domain=" + options.domain;
-        }
-        if (options.path) {
-          if (!pathValueRegExp.test(options.path)) {
-            throw new TypeError(`option path is invalid: ${options.path}`);
-          }
-          str += "; Path=" + options.path;
-        }
-        if (options.expires) {
-          if (!isDate(options.expires) || !Number.isFinite(options.expires.valueOf())) {
-            throw new TypeError(`option expires is invalid: ${options.expires}`);
-          }
-          str += "; Expires=" + options.expires.toUTCString();
-        }
-        if (options.httpOnly) {
-          str += "; HttpOnly";
-        }
-        if (options.secure) {
-          str += "; Secure";
-        }
-        if (options.partitioned) {
-          str += "; Partitioned";
-        }
-        if (options.priority) {
-          const priority = typeof options.priority === "string" ? options.priority.toLowerCase() : void 0;
-          switch (priority) {
-            case "low":
-              str += "; Priority=Low";
-              break;
-            case "medium":
-              str += "; Priority=Medium";
-              break;
-            case "high":
-              str += "; Priority=High";
-              break;
-            default:
-              throw new TypeError(`option priority is invalid: ${options.priority}`);
-          }
-        }
-        if (options.sameSite) {
-          const sameSite = typeof options.sameSite === "string" ? options.sameSite.toLowerCase() : options.sameSite;
-          switch (sameSite) {
-            case true:
-            case "strict":
-              str += "; SameSite=Strict";
-              break;
-            case "lax":
-              str += "; SameSite=Lax";
-              break;
-            case "none":
-              str += "; SameSite=None";
-              break;
-            default:
-              throw new TypeError(`option sameSite is invalid: ${options.sameSite}`);
-          }
-        }
-        return str;
-      }
-      function decode(str) {
-        if (str.indexOf("%") === -1)
-          return str;
-        try {
-          return decodeURIComponent(str);
-        } catch (e2) {
-          return str;
-        }
-      }
-      function isDate(val) {
-        return __toString.call(val) === "[object Date]";
       }
     }
   });
@@ -19672,20 +19524,20 @@
         function validateChildKeys(node) {
           "object" === typeof node && null !== node && node.$$typeof === REACT_ELEMENT_TYPE && node._store && (node._store.validated = 1);
         }
-        var React24 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+        var React23 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
         Symbol.for("react.provider");
-        var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React24.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+        var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React23.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
           return null;
         };
-        React24 = {
-          "react-stack-bottom-frame": function(callStackForError) {
+        React23 = {
+          react_stack_bottom_frame: function(callStackForError) {
             return callStackForError();
           }
         };
         var specialPropKeyWarningShown;
         var didWarnAboutElementRef = {};
-        var unknownOwnerDebugStack = React24["react-stack-bottom-frame"].bind(
-          React24,
+        var unknownOwnerDebugStack = React23.react_stack_bottom_frame.bind(
+          React23,
           UnknownOwner
         )();
         var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
@@ -19734,27 +19586,24 @@
   });
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/index.js
-  var import_react11 = __toESM(require_react(), 1);
+  var import_react12 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/template.jsx
-  var import_react10 = __toESM(require_react(), 1);
+  var import_react11 = __toESM(require_react(), 1);
 
-  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-router/dist/development/chunk-QMGIS6GS.mjs
-  var React3 = __toESM(require_react(), 1);
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/node_modules/react-router/dist/development/chunk-PVWAREVJ.mjs
   var React = __toESM(require_react(), 1);
   var React2 = __toESM(require_react(), 1);
-  var React10 = __toESM(require_react(), 1);
-  var React9 = __toESM(require_react(), 1);
+  var React3 = __toESM(require_react(), 1);
   var React4 = __toESM(require_react(), 1);
+  var React9 = __toESM(require_react(), 1);
   var React8 = __toESM(require_react(), 1);
   var React7 = __toESM(require_react(), 1);
-  var React5 = __toESM(require_react(), 1);
   var React6 = __toESM(require_react(), 1);
+  var React5 = __toESM(require_react(), 1);
+  var React10 = __toESM(require_react(), 1);
   var React11 = __toESM(require_react(), 1);
-  var React12 = __toESM(require_react(), 1);
-  var React13 = __toESM(require_react(), 1);
-  var import_cookie = __toESM(require_dist(), 1);
   var import_meta = {};
   var PopStateEventType = "popstate";
   function createHashHistory(options = {}) {
@@ -19777,13 +19626,13 @@
     }
     function createHashHref(window2, to) {
       let base = window2.document.querySelector("base");
-      let href2 = "";
+      let href = "";
       if (base && base.getAttribute("href")) {
         let url = window2.location.href;
         let hashIndex = url.indexOf("#");
-        href2 = hashIndex === -1 ? url : url.slice(0, hashIndex);
+        href = hashIndex === -1 ? url : url.slice(0, hashIndex);
       }
-      return href2 + "#" + (typeof to === "string" ? to : createPath(to));
+      return href + "#" + (typeof to === "string" ? to : createPath(to));
     }
     function validateHashLocation(location, to) {
       warning(
@@ -19970,12 +19819,12 @@
       base = window.location.origin !== "null" ? window.location.origin : window.location.href;
     }
     invariant(base, "No window.location.(origin|href) available to create URL");
-    let href2 = typeof to === "string" ? to : createPath(to);
-    href2 = href2.replace(/ $/, "%20");
-    if (!isAbsolute && href2.startsWith("//")) {
-      href2 = base + href2;
+    let href = typeof to === "string" ? to : createPath(to);
+    href = href.replace(/ $/, "%20");
+    if (!isAbsolute && href.startsWith("//")) {
+      href = base + href;
     }
-    return new URL(href2, base);
+    return new URL(href, base);
   }
   var _map;
   _map = /* @__PURE__ */ new WeakMap();
@@ -20008,11 +19857,12 @@
       pathname,
       params,
       data: loaderData[route.id],
+      loaderData: loaderData[route.id],
       handle: route.handle
     };
   }
-  function flattenRoutes(routes, branches = [], parentsMeta = [], parentPath = "") {
-    let flattenRoute = (route, index, relativePath) => {
+  function flattenRoutes(routes, branches = [], parentsMeta = [], parentPath = "", _hasParentOptionalSegments = false) {
+    let flattenRoute = (route, index, hasParentOptionalSegments = _hasParentOptionalSegments, relativePath) => {
       let meta = {
         relativePath: relativePath === void 0 ? route.path || "" : relativePath,
         caseSensitive: route.caseSensitive === true,
@@ -20020,6 +19870,9 @@
         route
       };
       if (meta.relativePath.startsWith("/")) {
+        if (!meta.relativePath.startsWith(parentPath) && hasParentOptionalSegments) {
+          return;
+        }
         invariant(
           meta.relativePath.startsWith(parentPath),
           `Absolute route path "${meta.relativePath}" nested under path "${parentPath}" is not valid. An absolute child route path must start with the combined path of all its parent routes.`
@@ -20035,7 +19888,13 @@
           route.index !== true,
           `Index routes must not have child routes. Please remove all child routes from route path "${path}".`
         );
-        flattenRoutes(route.children, branches, routesMeta, path);
+        flattenRoutes(
+          route.children,
+          branches,
+          routesMeta,
+          path,
+          hasParentOptionalSegments
+        );
       }
       if (route.path == null && !route.index) {
         return;
@@ -20051,7 +19910,7 @@
         flattenRoute(route, index);
       } else {
         for (let exploded of explodeOptionalSegments(route.path)) {
-          flattenRoute(route, index, exploded);
+          flattenRoute(route, index, true, exploded);
         }
       }
     });
@@ -20215,7 +20074,7 @@
         params.push({ paramName, isOptional: isOptional != null });
         return isOptional ? "/?([^\\/]+)?" : "/([^\\/]+)";
       }
-    );
+    ).replace(/\/([\w-]+)\?(\/|$)/g, "(/$1)?$2");
     if (path.endsWith("*")) {
       params.push({ paramName: "*" });
       regexpSource += path === "*" || path === "/*" ? "(.*)$" : "(?:\\/(.+)|\\/*)$";
@@ -20362,6 +20221,7 @@
   DataRouterContext.displayName = "DataRouter";
   var DataRouterStateContext = React.createContext(null);
   DataRouterStateContext.displayName = "DataRouterState";
+  var RSCRouterContext = React.createContext(false);
   var ViewTransitionContext = React.createContext({
     isTransitioning: false
   });
@@ -20501,7 +20361,7 @@
   function useRoutes(routes, locationArg) {
     return useRoutesImpl(routes, locationArg);
   }
-  function useRoutesImpl(routes, locationArg, dataRouterState, future) {
+  function useRoutesImpl(routes, locationArg, dataRouterState, unstable_onError, future) {
     invariant(
       useInRouterContext(),
       // TODO: This error is probably because they somehow have 2 versions of the
@@ -20573,6 +20433,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       ),
       parentMatches,
       dataRouterState,
+      unstable_onError,
       future
     );
     if (locationArg && renderedMatches) {
@@ -20642,11 +20503,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       };
     }
     componentDidCatch(error, errorInfo) {
-      console.error(
-        "React Router caught the following error during render",
-        error,
-        errorInfo
-      );
+      if (this.props.unstable_onError) {
+        this.props.unstable_onError(error, errorInfo);
+      } else {
+        console.error(
+          "React Router caught the following error during render",
+          error
+        );
+      }
     }
     render() {
       return this.state.error !== void 0 ? /* @__PURE__ */ React2.createElement(RouteContext.Provider, { value: this.props.routeContext }, /* @__PURE__ */ React2.createElement(
@@ -20665,7 +20529,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
     return /* @__PURE__ */ React2.createElement(RouteContext.Provider, { value: routeContext }, children);
   }
-  function _renderMatches(matches, parentMatches = [], dataRouterState = null, future = null) {
+  function _renderMatches(matches, parentMatches = [], dataRouterState = null, unstable_onError = null, future = null) {
     if (matches == null) {
       if (!dataRouterState) {
         return null;
@@ -20718,68 +20582,72 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         }
       }
     }
-    return renderedMatches.reduceRight((outlet, match, index) => {
-      let error;
-      let shouldRenderHydrateFallback = false;
-      let errorElement = null;
-      let hydrateFallbackElement = null;
-      if (dataRouterState) {
-        error = errors && match.route.id ? errors[match.route.id] : void 0;
-        errorElement = match.route.errorElement || defaultErrorElement;
-        if (renderFallback) {
-          if (fallbackIndex < 0 && index === 0) {
-            warningOnce(
-              "route-fallback",
-              false,
-              "No `HydrateFallback` element provided to render during initial hydration"
-            );
-            shouldRenderHydrateFallback = true;
-            hydrateFallbackElement = null;
-          } else if (fallbackIndex === index) {
-            shouldRenderHydrateFallback = true;
-            hydrateFallbackElement = match.route.hydrateFallbackElement || null;
+    return renderedMatches.reduceRight(
+      (outlet, match, index) => {
+        let error;
+        let shouldRenderHydrateFallback = false;
+        let errorElement = null;
+        let hydrateFallbackElement = null;
+        if (dataRouterState) {
+          error = errors && match.route.id ? errors[match.route.id] : void 0;
+          errorElement = match.route.errorElement || defaultErrorElement;
+          if (renderFallback) {
+            if (fallbackIndex < 0 && index === 0) {
+              warningOnce(
+                "route-fallback",
+                false,
+                "No `HydrateFallback` element provided to render during initial hydration"
+              );
+              shouldRenderHydrateFallback = true;
+              hydrateFallbackElement = null;
+            } else if (fallbackIndex === index) {
+              shouldRenderHydrateFallback = true;
+              hydrateFallbackElement = match.route.hydrateFallbackElement || null;
+            }
           }
         }
-      }
-      let matches2 = parentMatches.concat(renderedMatches.slice(0, index + 1));
-      let getChildren = () => {
-        let children;
-        if (error) {
-          children = errorElement;
-        } else if (shouldRenderHydrateFallback) {
-          children = hydrateFallbackElement;
-        } else if (match.route.Component) {
-          children = /* @__PURE__ */ React2.createElement(match.route.Component, null);
-        } else if (match.route.element) {
-          children = match.route.element;
-        } else {
-          children = outlet;
-        }
-        return /* @__PURE__ */ React2.createElement(
-          RenderedRoute,
+        let matches2 = parentMatches.concat(renderedMatches.slice(0, index + 1));
+        let getChildren = () => {
+          let children;
+          if (error) {
+            children = errorElement;
+          } else if (shouldRenderHydrateFallback) {
+            children = hydrateFallbackElement;
+          } else if (match.route.Component) {
+            children = /* @__PURE__ */ React2.createElement(match.route.Component, null);
+          } else if (match.route.element) {
+            children = match.route.element;
+          } else {
+            children = outlet;
+          }
+          return /* @__PURE__ */ React2.createElement(
+            RenderedRoute,
+            {
+              match,
+              routeContext: {
+                outlet,
+                matches: matches2,
+                isDataRoute: dataRouterState != null
+              },
+              children
+            }
+          );
+        };
+        return dataRouterState && (match.route.ErrorBoundary || match.route.errorElement || index === 0) ? /* @__PURE__ */ React2.createElement(
+          RenderErrorBoundary,
           {
-            match,
-            routeContext: {
-              outlet,
-              matches: matches2,
-              isDataRoute: dataRouterState != null
-            },
-            children
+            location: dataRouterState.location,
+            revalidation: dataRouterState.revalidation,
+            component: errorElement,
+            error,
+            children: getChildren(),
+            routeContext: { outlet: null, matches: matches2, isDataRoute: true },
+            unstable_onError
           }
-        );
-      };
-      return dataRouterState && (match.route.ErrorBoundary || match.route.errorElement || index === 0) ? /* @__PURE__ */ React2.createElement(
-        RenderErrorBoundary,
-        {
-          location: dataRouterState.location,
-          revalidation: dataRouterState.revalidation,
-          component: errorElement,
-          error,
-          children: getChildren(),
-          routeContext: { outlet: null, matches: matches2, isDataRoute: true }
-        }
-      ) : getChildren();
-    }, null);
+        ) : getChildren();
+      },
+      null
+    );
   }
   function getDataRouterConsoleError(hookName) {
     return `${hookName} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`;
@@ -20884,14 +20752,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   function DataRoutes({
     routes,
     future,
-    state
+    state,
+    unstable_onError
   }) {
-    return useRoutesImpl(routes, void 0, state, future);
+    return useRoutesImpl(routes, void 0, state, unstable_onError, future);
   }
   function Outlet(props) {
     return useOutlet(props.context);
   }
-  function Route(_props) {
+  function Route(props) {
     invariant(
       false,
       `A <Route> is only ever to be used as the child of <Routes> element, never rendered directly. Please wrap your <Route> in a <Routes>.`
@@ -21113,10 +20982,28 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
     return { action, method: method.toLowerCase(), encType, formData, body };
   }
+  var objectProtoNames = Object.getOwnPropertyNames(Object.prototype).sort().join("\0");
   function invariant2(value, message) {
     if (value === false || value === null || typeof value === "undefined") {
       throw new Error(message);
     }
+  }
+  var SingleFetchRedirectSymbol = Symbol("SingleFetchRedirect");
+  function singleFetchUrl(reqUrl, basename, extension) {
+    let url = typeof reqUrl === "string" ? new URL(
+      reqUrl,
+      // This can be called during the SSR flow via PrefetchPageLinksImpl so
+      // don't assume window is available
+      typeof window === "undefined" ? "server://singlefetch/" : window.location.origin
+    ) : reqUrl;
+    if (url.pathname === "/") {
+      url.pathname = `_root.${extension}`;
+    } else if (basename && stripBasename(url.pathname, basename) === "/") {
+      url.pathname = `${basename.replace(/\/$/, "")}/_root.${extension}`;
+    } else {
+      url.pathname = `${url.pathname.replace(/\/$/, "")}.${extension}`;
+    }
+    return url;
   }
   async function loadRouteModule(route, routeModulesCache) {
     if (route.id in routeModulesCache) {
@@ -21269,27 +21156,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       return deduped;
     }, []);
   }
-  var objectProtoNames = Object.getOwnPropertyNames(Object.prototype).sort().join("\0");
-  var SingleFetchRedirectSymbol = Symbol("SingleFetchRedirect");
-  var NO_BODY_STATUS_CODES = /* @__PURE__ */ new Set([100, 101, 204, 205]);
-  function singleFetchUrl(reqUrl, basename) {
-    let url = typeof reqUrl === "string" ? new URL(
-      reqUrl,
-      // This can be called during the SSR flow via PrefetchPageLinksImpl so
-      // don't assume window is available
-      typeof window === "undefined" ? "server://singlefetch/" : window.location.origin
-    ) : reqUrl;
-    if (url.pathname === "/") {
-      url.pathname = "_root.data";
-    } else if (basename && stripBasename(url.pathname, basename) === "/") {
-      url.pathname = `${basename.replace(/\/$/, "")}/_root.data`;
-    } else {
-      url.pathname = `${url.pathname.replace(/\/$/, "")}.data`;
-    }
-    return url;
-  }
   function useDataRouterContext2() {
-    let context = React9.useContext(DataRouterContext);
+    let context = React8.useContext(DataRouterContext);
     invariant2(
       context,
       "You must render this element inside a <DataRouterContext.Provider> element"
@@ -21297,17 +21165,17 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return context;
   }
   function useDataRouterStateContext() {
-    let context = React9.useContext(DataRouterStateContext);
+    let context = React8.useContext(DataRouterStateContext);
     invariant2(
       context,
       "You must render this element inside a <DataRouterStateContext.Provider> element"
     );
     return context;
   }
-  var FrameworkContext = React9.createContext(void 0);
+  var FrameworkContext = React8.createContext(void 0);
   FrameworkContext.displayName = "FrameworkContext";
   function useFrameworkContext() {
-    let context = React9.useContext(FrameworkContext);
+    let context = React8.useContext(FrameworkContext);
     invariant2(
       context,
       "You must render this element inside a <HydratedRouter> element"
@@ -21315,12 +21183,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return context;
   }
   function usePrefetchBehavior(prefetch, theirElementProps) {
-    let frameworkContext = React9.useContext(FrameworkContext);
-    let [maybePrefetch, setMaybePrefetch] = React9.useState(false);
-    let [shouldPrefetch, setShouldPrefetch] = React9.useState(false);
+    let frameworkContext = React8.useContext(FrameworkContext);
+    let [maybePrefetch, setMaybePrefetch] = React8.useState(false);
+    let [shouldPrefetch, setShouldPrefetch] = React8.useState(false);
     let { onFocus, onBlur, onMouseEnter, onMouseLeave, onTouchStart } = theirElementProps;
-    let ref = React9.useRef(null);
-    React9.useEffect(() => {
+    let ref = React8.useRef(null);
+    React8.useEffect(() => {
       if (prefetch === "render") {
         setShouldPrefetch(true);
       }
@@ -21337,7 +21205,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         };
       }
     }, [prefetch]);
-    React9.useEffect(() => {
+    React8.useEffect(() => {
       if (maybePrefetch) {
         let id = setTimeout(() => {
           setShouldPrefetch(true);
@@ -21380,24 +21248,21 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       }
     };
   }
-  function PrefetchPageLinks({
-    page,
-    ...dataLinkProps
-  }) {
+  function PrefetchPageLinks({ page, ...linkProps }) {
     let { router } = useDataRouterContext2();
-    let matches = React9.useMemo(
+    let matches = React8.useMemo(
       () => matchRoutes(router.routes, page, router.basename),
       [router.routes, page, router.basename]
     );
     if (!matches) {
       return null;
     }
-    return /* @__PURE__ */ React9.createElement(PrefetchPageLinksImpl, { page, matches, ...dataLinkProps });
+    return /* @__PURE__ */ React8.createElement(PrefetchPageLinksImpl, { page, matches, ...linkProps });
   }
   function useKeyedPrefetchLinks(matches) {
     let { manifest, routeModules } = useFrameworkContext();
-    let [keyedPrefetchLinks, setKeyedPrefetchLinks] = React9.useState([]);
-    React9.useEffect(() => {
+    let [keyedPrefetchLinks, setKeyedPrefetchLinks] = React8.useState([]);
+    React8.useEffect(() => {
       let interrupted = false;
       void getKeyedPrefetchLinks(matches, manifest, routeModules).then(
         (links) => {
@@ -21421,7 +21286,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     let { manifest, routeModules } = useFrameworkContext();
     let { basename } = useDataRouterContext2();
     let { loaderData, matches } = useDataRouterStateContext();
-    let newMatchesForData = React9.useMemo(
+    let newMatchesForData = React8.useMemo(
       () => getNewMatchesForLinks(
         page,
         nextMatches,
@@ -21432,7 +21297,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       ),
       [page, nextMatches, matches, manifest, location]
     );
-    let newMatchesForAssets = React9.useMemo(
+    let newMatchesForAssets = React8.useMemo(
       () => getNewMatchesForLinks(
         page,
         nextMatches,
@@ -21443,7 +21308,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       ),
       [page, nextMatches, matches, manifest, location]
     );
-    let dataHrefs = React9.useMemo(() => {
+    let dataHrefs = React8.useMemo(() => {
       if (page === location.pathname + location.search + location.hash) {
         return [];
       }
@@ -21465,7 +21330,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       if (routesParams.size === 0) {
         return [];
       }
-      let url = singleFetchUrl(page, basename);
+      let url = singleFetchUrl(page, basename, "data");
       if (foundOptOutRoute && routesParams.size > 0) {
         url.searchParams.set(
           "_routes",
@@ -21483,15 +21348,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       page,
       routeModules
     ]);
-    let moduleHrefs = React9.useMemo(
+    let moduleHrefs = React8.useMemo(
       () => getModuleLinkHrefs(newMatchesForAssets, manifest),
       [newMatchesForAssets, manifest]
     );
     let keyedPrefetchLinks = useKeyedPrefetchLinks(newMatchesForAssets);
-    return /* @__PURE__ */ React9.createElement(React9.Fragment, null, dataHrefs.map((href2) => /* @__PURE__ */ React9.createElement("link", { key: href2, rel: "prefetch", as: "fetch", href: href2, ...linkProps })), moduleHrefs.map((href2) => /* @__PURE__ */ React9.createElement("link", { key: href2, rel: "modulepreload", href: href2, ...linkProps })), keyedPrefetchLinks.map(({ key, link }) => (
+    return /* @__PURE__ */ React8.createElement(React8.Fragment, null, dataHrefs.map((href) => /* @__PURE__ */ React8.createElement("link", { key: href, rel: "prefetch", as: "fetch", href, ...linkProps })), moduleHrefs.map((href) => /* @__PURE__ */ React8.createElement("link", { key: href, rel: "modulepreload", href, ...linkProps })), keyedPrefetchLinks.map(({ key, link }) => (
       // these don't spread `linkProps` because they are full link descriptors
       // already with their own props
-      /* @__PURE__ */ React9.createElement("link", { key, ...link })
+      /* @__PURE__ */ React8.createElement("link", { key, nonce: linkProps.nonce, ...link })
     )));
   }
   function mergeRefs(...refs) {
@@ -21508,7 +21373,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
   try {
     if (isBrowser) {
-      window.__reactRouterVersion = "7.6.3";
+      window.__reactRouterVersion = // @ts-expect-error
+      "7.8.2";
     }
   } catch (e2) {
   }
@@ -21608,7 +21474,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           }
         }
       }
-      let href2 = useHref(to, { relative });
+      let href = useHref(to, { relative });
       let [shouldPrefetch, prefetchRef, prefetchHandlers] = usePrefetchBehavior(
         prefetch,
         rest
@@ -21634,7 +21500,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           {
             ...rest,
             ...prefetchHandlers,
-            href: absoluteHref || href2,
+            href: absoluteHref || href,
             onClick: isExternal || reloadDocument ? onClick : handleClick,
             ref: mergeRefs(forwardedRef, prefetchRef),
             target,
@@ -21642,7 +21508,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           }
         )
       );
-      return shouldPrefetch && !isAbsolute ? /* @__PURE__ */ React10.createElement(React10.Fragment, null, link, /* @__PURE__ */ React10.createElement(PrefetchPageLinks, { page: href2 })) : link;
+      return shouldPrefetch && !isAbsolute ? /* @__PURE__ */ React10.createElement(React10.Fragment, null, link, /* @__PURE__ */ React10.createElement(PrefetchPageLinks, { page: href })) : link;
     }
   );
   Link.displayName = "Link";
@@ -22036,14 +21902,23 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           window.scrollTo(0, restoreScrollPosition);
           return;
         }
-        if (location.hash) {
-          let el = document.getElementById(
-            decodeURIComponent(location.hash.slice(1))
-          );
-          if (el) {
-            el.scrollIntoView();
-            return;
+        try {
+          if (location.hash) {
+            let el = document.getElementById(
+              decodeURIComponent(location.hash.slice(1))
+            );
+            if (el) {
+              el.scrollIntoView();
+              return;
+            }
           }
+        } catch {
+          warning(
+            false,
+            `"${location.hash.slice(
+              1
+            )}" is not a decodable element ID. The view will not scroll to it.`
+          );
         }
         if (preventScrollReset === true) {
           return;
@@ -22062,7 +21937,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       };
     }, [callback, capture]);
   }
-  function useViewTransitionState(to, opts = {}) {
+  function useViewTransitionState(to, { relative } = {}) {
     let vtContext = React10.useContext(ViewTransitionContext);
     invariant(
       vtContext != null,
@@ -22072,7 +21947,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       "useViewTransitionState"
       /* useViewTransitionState */
     );
-    let path = useResolvedPath(to, { relative: opts.relative });
+    let path = useResolvedPath(to, { relative });
     if (!vtContext.isTransitioning) {
       return false;
     }
@@ -22080,10 +21955,6 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     let nextPath = stripBasename(vtContext.nextLocation.pathname, basename) || vtContext.nextLocation.pathname;
     return matchPath(path.pathname, nextPath) != null || matchPath(path.pathname, currentPath) != null;
   }
-  var SERVER_NO_BODY_STATUS_CODES = /* @__PURE__ */ new Set([
-    ...NO_BODY_STATUS_CODES,
-    304
-  ]);
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/layout.jsx
   var import_react4 = __toESM(require_react(), 1);
@@ -22238,7 +22109,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_react3 = __toESM(require_react(), 1);
   var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
   function About() {
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "about-markdown", dangerouslySetInnerHTML: { __html: '<h1>About Me</h1>\n<h1>Hello!</h1>\n<p>Hello! I am <strong>Zhiping</strong>, a project manager with marketing experience.</p>\n<ul>\n<li>I&#39;m currently working on <strong>an AI ski instruction product</strong>.  </li>\n<li>I\u2019m exploring <strong>AI-related products</strong> and <strong>AI marketing solutions</strong>.  </li>\n<li>\u{1F4E7} Reach me at: <a href="mailto:elainewu0427@outlook.com">elainewu0427@outlook.com</a></li>\n</ul>\n' } });
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "about-markdown", dangerouslySetInnerHTML: { __html: '<h1>About Me</h1>\n<h1>Hello!</h1>\n<p>Hello! I am <strong>Zhiping</strong>, a project manager with 5-year marketing experience.</p>\n<ul>\n<li>I&#39;m currently working on <strong>an AI ski instruction product</strong>.  </li>\n<li>I\u2019m exploring <strong>AI-related products</strong> and <strong>AI marketing solutions</strong>.  </li>\n<li>\u{1F4E7} Reach me at: <a href="mailto:elainewu0427@outlook.com">elainewu0427@outlook.com</a></li>\n</ul>\n' } });
   }
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/layout.jsx
@@ -22257,7 +22128,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             {
               className: "profile-text",
               onClick: () => {
-                if (location.pathname !== "/") navigate("/");
+                if (location.pathname !== "/") {
+                  navigate("/");
+                } else {
+                  toggleProfile();
+                }
               },
               children: location.pathname === "/" ? "Portfolio" : "Back to Home"
             }
@@ -22328,7 +22203,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
     return product;
   }
-  function parse2(source) {
+  function parse(source) {
     if (typeof source === "string") {
       var match = source.match(/matrix(3d)?\(([^)]+)\)/);
       if (match) {
@@ -22413,7 +22288,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     var i3 = t.indexOf(e2);
     -1 !== i3 && t.splice(i3, 1);
   }
-  var E = /* @__PURE__ */ function() {
+  var E = /* @__PURE__ */ (function() {
     function t() {
     }
     return t.prototype.run = function() {
@@ -22422,13 +22297,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         t2.springSystem.loop(_());
       });
     }, t;
-  }();
+  })();
   var A = function() {
     this.position = 0, this.velocity = 0;
   };
   var C = 0;
   var b = 1e-3;
-  var I = /* @__PURE__ */ function() {
+  var I = /* @__PURE__ */ (function() {
     function t(t2) {
       this._id = "s" + C++, this._springSystem = t2, this.listeners = [], this._startValue = 0, this._currentState = new A(), this._displacementFromRestThreshold = 1e-3, this._endValue = 0, this._overshootClampingEnabled = false, this._previousState = new A(), this._restSpeedThreshold = 1e-3, this._tempState = new A(), this._timeAccumulator = 0, this._wasAtRest = true, this._cachedSpringConfig = {};
     }
@@ -22506,8 +22381,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }, e2.removeListener = function(t2) {
       return S(this.listeners, t2), this;
     }, t;
-  }();
-  var w = /* @__PURE__ */ function() {
+  })();
+  var w = /* @__PURE__ */ (function() {
     function t(t2) {
       this.looper = t2 || new E(), this.looper.springSystem = this, this.listeners = [], this._activeSprings = [], this._idleSpringIndices = [], this._isIdle = true, this._lastTimeMillis = -1, this._springRegistry = {};
     }
@@ -22544,7 +22419,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       var e3 = this._springRegistry[t2];
       -1 === this._activeSprings.indexOf(e3) && this._activeSprings.push(e3), this.getIsIdle() && (this._isIdle = false, this.looper.run());
     }, t;
-  }();
+  })();
   var O = new w();
   var x = function(t) {
     var e2 = t.springConfig, i3 = e2.overshootClamping, n2 = t.getOnUpdateFunc, r2 = t.onAnimationEnd, s3 = t.onSpringActivate, a3 = O.createSpring(e2.stiffness, e2.damping);
@@ -22607,29 +22482,29 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       var q2, X = M(T((q2 = { element: E2, portalKey: I2 }).element, q2.portalKey)).map(function(t) {
         var e2 = t[0], i3 = t[1], n3 = window.getComputedStyle(e2);
         return [e2.dataset.flipId, { element: e2, rect: i3, opacity: parseFloat(n3.opacity), transform: n3.transform }];
-      }).reduce(R, {}), Y2 = function(t) {
+      }).reduce(R, {}), Y2 = (function(t) {
         var e2 = t.containerEl, i3 = t.portalKey;
-        return i3 ? /* @__PURE__ */ function(t2) {
+        return i3 ? /* @__PURE__ */ (function(t2) {
           return function(e3) {
             return r(document.querySelectorAll("[" + d + '="' + t2 + '"]' + e3));
           };
-        }(i3) : e2 ? function(t2) {
+        })(i3) : e2 ? (function(t2) {
           var e3 = Math.random().toFixed(5);
           return t2.dataset.flipperId = e3, function(i4) {
             return r(t2.querySelectorAll('[data-flipper-id="' + e3 + '"] ' + i4));
           };
-        }(e2) : function() {
+        })(e2) : function() {
           return [];
         };
-      }({ containerEl: E2, portalKey: I2 }), W2 = /* @__PURE__ */ function(t) {
+      })({ containerEl: E2, portalKey: I2 }), W2 = /* @__PURE__ */ (function(t) {
         return function(e2) {
           return t("[" + c + '="' + e2 + '"]')[0];
         };
-      }(Y2), K = function(t) {
+      })(Y2), K = function(t) {
         return y3[t] && X[t];
       }, H = Object.keys(y3).concat(Object.keys(X)).filter(function(t) {
         return !K(t);
-      }), J = { flipCallbacks: S2, getElement: W2, flippedElementPositionsBeforeUpdate: y3, flippedElementPositionsAfterUpdate: X, inProgressAnimations: h3, decisionData: j2 }, z = function(t) {
+      }), J = { flipCallbacks: S2, getElement: W2, flippedElementPositionsBeforeUpdate: y3, flippedElementPositionsAfterUpdate: X, inProgressAnimations: h3, decisionData: j2 }, z = (function(t) {
         var e2, i3 = t.unflippedIds, n3 = t.flipCallbacks, r2 = t.getElement, s3 = t.flippedElementPositionsBeforeUpdate, a3 = t.flippedElementPositionsAfterUpdate, o4 = t.inProgressAnimations, l3 = t.decisionData, p4 = i3.filter(function(t2) {
           return a3[t2];
         }).filter(function(t2) {
@@ -22674,9 +22549,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             return t2();
           }), u3;
         } };
-      }(a({}, J, { unflippedIds: H })), G = z.hideEnteringElements, Q = z.animateEnteringElements, Z = z.animateExitingElements, $ = a({}, J, { containerEl: E2, flippedIds: p3.filter(K), applyTransformOrigin: A2, spring: C2, debug: b2, staggerConfig: O2, scopedSelector: Y2, onComplete: N2 });
+      })(a({}, J, { unflippedIds: H })), G = z.hideEnteringElements, Q = z.animateEnteringElements, Z = z.animateExitingElements, $ = a({}, J, { containerEl: E2, flippedIds: p3.filter(K), applyTransformOrigin: A2, spring: C2, debug: b2, staggerConfig: O2, scopedSelector: Y2, onComplete: N2 });
       L2 && L2(E2, j2);
-      var tt = function(n3) {
+      var tt = (function(n3) {
         var o4, p4 = n3.flippedIds, c3 = n3.flipCallbacks, d3 = n3.inProgressAnimations, f4 = n3.flippedElementPositionsBeforeUpdate, h4 = n3.flippedElementPositionsAfterUpdate, v4 = n3.applyTransformOrigin, y4 = n3.spring, _3 = n3.getElement, S3 = n3.debug, E3 = n3.staggerConfig, A3 = void 0 === E3 ? {} : E3, C3 = n3.decisionData, b3 = void 0 === C3 ? {} : C3, I3 = n3.onComplete, w3 = n3.containerEl, O3 = new Promise(function(t) {
           o4 = t;
         });
@@ -22695,27 +22570,27 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           if (c3[n4] && c3[n4].shouldFlip && !c3[n4].shouldFlip(b3.previous, b3.current)) return false;
           var k3 = Math.abs(s3.left - p5.left) + Math.abs(s3.top - p5.top), j4 = Math.abs(s3.width - p5.width) + Math.abs(s3.height - p5.height), B4 = Math.abs(S4 - _4);
           if (0 === s3.height && 0 === p5.height || 0 === s3.width && 0 === p5.width || k3 < 0.5 && j4 < 0.5 && B4 < 0.01) return false;
-          var N4 = parse2(h4[n4].transform), L4 = { matrix: N4 }, q4 = { matrix: [] }, X2 = [N4];
+          var N4 = parse(h4[n4].transform), L4 = { matrix: N4 }, q4 = { matrix: [] }, X2 = [N4];
           O4.translate && (X2.push(translateX(s3.left - p5.left)), X2.push(translateY(s3.top - p5.top))), O4.scale && (X2.push(scaleX(Math.max(s3.width, 1) / Math.max(p5.width, 1))), X2.push(scaleY(Math.max(s3.height, 1) / Math.max(p5.height, 1)))), O4.opacity && (q4.opacity = _4, L4.opacity = S4);
           var Y3 = [];
           if (!c3[n4] || !c3[n4].shouldInvert || c3[n4].shouldInvert(b3.previous, b3.current)) {
-            var W3 = function(t, e2) {
+            var W3 = (function(t, e2) {
               return r(t.querySelectorAll("[" + u + '="' + e2 + '"]'));
-            }(A4, n4);
+            })(A4, n4);
             Y3 = W3.map(function(t) {
               return [t, D(t)];
             });
           }
           q4.matrix = F(X2.reduce(multiply)), L4.matrix = F(L4.matrix);
-          var K2, H2 = function(t) {
+          var K2, H2 = (function(t) {
             var i3 = t.element, n5 = t.invertedChildren, r2 = t.body;
             return function(t2) {
               var s4 = t2.matrix, a3 = t2.opacity, o5 = t2.forceMinVals;
               if (e(a3) && (i3.style.opacity = a3 + ""), o5 && (i3.style.minHeight = "1px", i3.style.minWidth = "1px"), s4) {
-                var l3 = function(t3) {
+                var l3 = (function(t3) {
                   return "matrix(" + t3.join(", ") + ")";
-                }(s4);
-                i3.style.transform = l3, n5 && function(t3) {
+                })(s4);
+                i3.style.transform = l3, n5 && (function(t3) {
                   var e2 = t3.matrix, i4 = t3.body;
                   t3.invertedChildren.forEach(function(t4) {
                     var n6 = t4[0], r3 = t4[1];
@@ -22724,10 +22599,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       r3.translate && (l4.translateX = -e2[4] / s5, l4.translateY = -o6 / a4, p6 += "translate(" + l4.translateX + "px, " + l4.translateY + "px)"), r3.scale && (l4.scaleX = 1 / s5, l4.scaleY = 1 / a4, p6 += " scale(" + l4.scaleX + ", " + l4.scaleY + ")"), n6.style.transform = p6;
                     }
                   });
-                }({ invertedChildren: n5, matrix: s4, body: r2 });
+                })({ invertedChildren: n5, matrix: s4, body: r2 });
               }
             };
-          }({ element: A4, invertedChildren: Y3, body: T2 });
+          })({ element: A4, invertedChildren: Y3, body: T2 });
           if (c3[n4] && c3[n4].onComplete) {
             var J2 = c3[n4].onComplete;
             K2 = function() {
@@ -22794,7 +22669,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             N3[t] || V(L3[t], A3[t]);
           }), O3;
         };
-      }($);
+      })($);
       B2 ? B2({ hideEnteringElements: G, animateEnteringElements: Q, animateExitingElements: Z, animateFlippedElements: tt }) : (G(), Z().then(Q), tt());
     }
   };
@@ -22821,13 +22696,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       }
       return [e3.dataset.flipId, { rect: i4, opacity: parseFloat(window.getComputedStyle(e3).opacity || "1"), domDataForExitAnimations: r2 }];
     }).reduce(R, {});
-    return function(t2, e3) {
+    return (function(t2, e3) {
       Object.keys(t2).forEach(function(e4) {
         t2[e4].destroy && t2[e4].destroy(), t2[e4].onAnimationEnd && t2[e4].onAnimationEnd(true), delete t2[e4];
       }), e3.forEach(function(t3) {
         t3.style.transform = "", t3.style.opacity = "";
       });
-    }(o3, l3.concat(p3)), { flippedElementPositions: m3, cachedOrderedFlipIds: g3.map(function(t2) {
+    })(o3, l3.concat(p3)), { flippedElementPositions: m3, cachedOrderedFlipIds: g3.map(function(t2) {
       return t2[0].dataset.flipId;
     }) };
   };
@@ -22857,7 +22732,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
   var f2 = /* @__PURE__ */ (0, import_react5.createContext)({});
   var u2 = /* @__PURE__ */ (0, import_react5.createContext)("portal");
-  var h2 = /* @__PURE__ */ function(r2) {
+  var h2 = /* @__PURE__ */ (function(r2) {
     var n2, o3;
     function p3() {
       for (var e2, t = arguments.length, n3 = new Array(t), i3 = 0; i3 < t; i3++) n3[i3] = arguments[i3];
@@ -22875,14 +22750,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       } }, this.props.children));
       return r3 && (n3 = /* @__PURE__ */ import_react5.default.createElement(u2.Provider, { value: r3 }, n3)), n3;
     }, p3;
-  }(import_react5.Component);
+  })(import_react5.Component);
   h2.defaultProps = { applyTransformOrigin: true, element: "div" };
   var m2 = ["children", "flipId", "inverseFlipId", "portalKey"];
   var y2 = ["children", "flipId", "shouldFlip", "shouldInvert", "onAppear", "onStart", "onStartImmediate", "onComplete", "onExit", "onSpringUpdate"];
   var g2 = function(e2) {
-    var t, i3 = e2.children, o3 = e2.flipId, p3 = e2.inverseFlipId, s3 = e2.portalKey, c3 = d2(e2, m2), f3 = i3, u3 = /* @__PURE__ */ function(e3) {
+    var t, i3 = e2.children, o3 = e2.flipId, p3 = e2.inverseFlipId, s3 = e2.portalKey, c3 = d2(e2, m2), f3 = i3, u3 = /* @__PURE__ */ (function(e3) {
       return "function" == typeof e3;
-    }(f3);
+    })(f3);
     if (!u3) try {
       f3 = import_react5.Children.only(i3);
     } catch (e3) {
@@ -22925,42 +22800,50 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_react7 = __toESM(require_react(), 1);
   var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
   function DigitalSmartBudgetSystem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>Digital-Smart-Budget-System</h1><h2 style="color: #4a4a4a; font-weight: normal;">Intelligent Budget and Risk Control Management System</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3><strong>Background</strong></h3>\n<p>There was a serious backlog of B2B accounts receivable. The ROI of promotional funds was difficult to quantify, and manual auditing and deployment processes were inefficient. These issues led to over-budget campaigns, triggering complaints from distributors and financial disputes.</p>\n<h3><strong>Objective</strong></h3>\n<p>Develop an integrated budgeting and risk control system embedded with a machine learning (ML) scoring model to improve fund utilization efficiency and compliance.</p>\n<h3><strong>Actions</strong></h3>\n<ul>\n<li>Cleared historical receivables and introduced third-party payment partners. Extracted transaction risk features and embedded them into the approval process.</li>\n<li>Designed a promotional budget allocation algorithm and a tracking mechanism to support year-round, category- and region-specific budget planning, enabling data-driven ROI optimization.</li>\n<li>Built a risk identification mechanism using ML models to automatically flag abnormal activities and block over-budget deployments, eliminating the risk of financial waste.</li>\n</ul>\n<p><img src="/assets/Digital-Smart-Budget-System/project2-budget-model.png" alt="Digital Budget system"></p>\n<h3><strong>Results</strong></h3>\n<ul>\n<li>Approval efficiency improved from manual review to automatic processing within 5 minutes, with a 92% accuracy rate in document authenticity verification.</li>\n<li>Resource utilization rate reached 90%, with zero complaints from marketing campaigns, enabling precise risk control and fund allocation across departments.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>Digital-Smart-Budget-System</h1><h2 style="color: #4a4a4a; font-weight: normal;">Intelligent Budget and Risk Control Management System</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3><strong>Background</strong></h3>\n<p>There was a serious backlog of B2B accounts receivable. The ROI of promotional funds was difficult to quantify, and manual auditing and deployment processes were inefficient. These issues led to over-budget campaigns, triggering complaints from distributors and financial disputes.</p>\n<h3><strong>Objective</strong></h3>\n<p>Develop an integrated budgeting and risk control system embedded with a machine learning (ML) scoring model to improve fund utilization efficiency and compliance.</p>\n<h3><strong>Actions</strong></h3>\n<ul>\n<li>Cleared historical receivables and introduced third-party payment partners. Extracted transaction risk features and embedded them into the approval process.</li>\n<li>Designed a promotional budget allocation algorithm and a tracking mechanism to support year-round, category- and region-specific budget planning, enabling data-driven ROI optimization.</li>\n<li>Built a risk identification mechanism using ML models to automatically flag abnormal activities and block over-budget deployments, eliminating the risk of financial waste.</li>\n</ul>\n<p><img src="/assets/Digital-Smart-Budget-System/project2-budget-model.png" alt="Digital Budget system" class="mark-img" /></p>\n<h3><strong>Results</strong></h3>\n<ul>\n<li>Approval efficiency improved from manual review to automatic processing within 5 minutes, with a 92% accuracy rate in document authenticity verification.</li>\n<li>Resource utilization rate reached 90%, with zero complaints from marketing campaigns, enabling precise risk control and fund allocation across departments.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
   }
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/ERPSystem.js
   var import_react8 = __toESM(require_react(), 1);
   var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
   function ERPSystem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>ERP-System-and-AI-Powdered Product Selection</h1><h2 style="color: #4a4a4a; font-weight: normal;">ERP System for Inventory and Sales management & AI-powdered Product Selection</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3>Background</h3>\n<p>The original ERP system could not support accurate inventory forecasting or manage the cash flow cycle, leading to overstock and chaotic procurement rhythms. The manufacturing factories were unable to manage operations effectively.</p>\n<h3>Objective</h3>\n<p>Develop an ERP forecasting system that incorporates &quot;payment cycle&quot; logic to enable synchronized management of demand, sales, and capital flow.</p>\n<h3>Actions</h3>\n<ul>\n<li>Built a linked model for &quot;Procurement\u2013Warehousing\u2013Sales\u2013Payment Collection&quot; and integrated it into the ERP system for rolling annual budget forecasting.</li>\n<li>Modeled inventory turnover using time-series data at both regional and SKU levels to identify redundant stock.</li>\n</ul>\n<h3>Results</h3>\n<ul>\n<li>Improved inventory forecasting accuracy.</li>\n<li>Reduced warehousing costs by 30%.</li>\n<li>Controlled product profit margins between 20\u201330%.</li>\n</ul>\n<hr>\n<h3><strong>AI-Powered Product Selection and Brand Incubation System</strong></h3>\n<h3>Background</h3>\n<p>Product selection decisions were based on subjective judgment, and brand incubation lacked data support, resulting in inconsistent efficiency and success rates.</p>\n<h3>Objective</h3>\n<p>Establish a data-driven product selection system and utilize AI to assist in new product entry and brand positioning.</p>\n<h3>Actions</h3>\n<ul>\n<li>Designed a product selection SOP incorporating multi-factor scoring models using warehousing turnover rate, ROI, and regional demand heat.</li>\n<li>Built a popularity prediction model using Python to assist with SKU mix optimization.</li>\n<li>Developed an NLP-based sentiment analysis model to interpret user reviews and differentiate competitors, aiding OEM strategy.</li>\n</ul>\n<p><img src="/assets/ERP-system/project34.png" alt="ERP system"></p>\n<h3>Results</h3>\n<ul>\n<li>Improved product selection efficiency by 30%.</li>\n<li>Successfully launched 2 self-developed brands.</li>\n<li>Achieved 20% profit margin on individual SKUs.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>ERP-System-and-AI-Powdered Product Selection</h1><h2 style="color: #4a4a4a; font-weight: normal;">ERP System for Inventory and Sales management & AI-powdered Product Selection</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3>Background</h3>\n<p>The original ERP system could not support accurate inventory forecasting or manage the cash flow cycle, leading to overstock and chaotic procurement rhythms. The manufacturing factories were unable to manage operations effectively.</p>\n<h3>Objective</h3>\n<p>Develop an ERP forecasting system that incorporates &quot;payment cycle&quot; logic to enable synchronized management of demand, sales, and capital flow.</p>\n<h3>Actions</h3>\n<ul>\n<li>Built a linked model for &quot;Procurement\u2013Warehousing\u2013Sales\u2013Payment Collection&quot; and integrated it into the ERP system for rolling annual budget forecasting.</li>\n<li>Modeled inventory turnover using time-series data at both regional and SKU levels to identify redundant stock.</li>\n</ul>\n<h3>Results</h3>\n<ul>\n<li>Improved inventory forecasting accuracy.</li>\n<li>Reduced warehousing costs by 30%.</li>\n<li>Controlled product profit margins between 20\u201330%.</li>\n</ul>\n<hr>\n<h3><strong>AI-Powered Product Selection and Brand Incubation System</strong></h3>\n<h3>Background</h3>\n<p>Product selection decisions were based on subjective judgment, and brand incubation lacked data support, resulting in inconsistent efficiency and success rates.</p>\n<h3>Objective</h3>\n<p>Establish a data-driven product selection system and utilize AI to assist in new product entry and brand positioning.</p>\n<h3>Actions</h3>\n<ul>\n<li>Designed a product selection SOP incorporating multi-factor scoring models using warehousing turnover rate, ROI, and regional demand heat.</li>\n<li>Built a popularity prediction model using Python to assist with SKU mix optimization.</li>\n<li>Developed an NLP-based sentiment analysis model to interpret user reviews and differentiate competitors, aiding OEM strategy.</li>\n</ul>\n<p><img src="/assets/ERP-system/project34.png" alt="ERP system" class="mark-img" /></p>\n<h3>Results</h3>\n<ul>\n<li>Improved product selection efficiency by 30%.</li>\n<li>Successfully launched 2 self-developed brands.</li>\n<li>Achieved 20% profit margin on individual SKUs.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
+  }
+
+  // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/GUIDEXAISkiCoach.js
+  var import_react9 = __toESM(require_react(), 1);
+  var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
+  function GUIDEXAISkiCoach() {
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>GUIDEX-AI-ski-coach</h1><h2 style="color: #4a4a4a; font-weight: normal;">Artificial Intelligence Ski Coach Application</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3><strong>Background</strong></h3>\n<p>Beginner snowboarders lack affordable and real-time coaching solutions. Traditional instructors are expensive, require advance booking, and cannot deliver instant feedback aligned with standardized training methods.</p>\n<h3><strong>Objective</strong></h3>\n<p>Develop an AI-powered coaching app that analyzes user-uploaded ski videos, detects incorrect movements based on international CASI/CISA/AASI/BASI/JSBA standards, and delivers beginner-friendly, actionable improvement guidance.</p>\n<p><img src="/assets/GUIDEX-AI-ski-coach/1331introduction.png" alt="1331introduction" class="mark-img" />\n<img src="/assets/GUIDEX-AI-ski-coach/1331introduction2.png" alt="1331introduction2" class="mark-img" /></p>\n<h3><strong>Actions</strong></h3>\n<ul>\n<li><p>Led end-to-end product lifecycle from requirement analysis to feature design, MLOps deployment, and launch of dual apps for users and coaches.</p>\n</li>\n<li><p>Defined video data standards and collaborated with engineering teams to implement time-series deep learning models for motion recognition and error detection.</p>\n</li>\n</ul>\n<p><img src="/assets/GUIDEX-AI-ski-coach/1331meetguidex.png" alt="1331meetguidex" class="mark-img" /></p>\n<ul>\n<li><p>Structured CASI/CISA standards into explainable feedback modules, enabling interpretable guidance that addressed beginner cognitive pain points.</p>\n</li>\n<li><p>Designed scalable product architecture (personalized feedback for users + data management for coaches) and implemented a closed-loop feedback mechanism to enhance model performance and business value.</p>\n</li>\n</ul>\n<p><img src="/assets/GUIDEX-AI-ski-coach/1331tips.png" alt="1331tips" class="mark-img" />\n<img src="/assets/GUIDEX-AI-ski-coach/1331coach.png" alt="1331coach" class="mark-img" /></p>\n<h3><strong>Results</strong></h3>\n<ul>\n<li><p>Successfully launched the first AI-based snowboard edge-switching guidance product with 70% model accuracy.</p>\n</li>\n<li><p>Reduced user effort in motion comprehension by 90% and shortened learning cycles by 1\u20132 weeks.</p>\n</li>\n<li><p>Pioneered a low-cost AI virtual coaching model, setting a new benchmark for scalable sports technology applications.</p>\n</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
   }
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pages/OneBottleOneCode.js
-  var import_react9 = __toESM(require_react(), 1);
-  var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
+  var import_react10 = __toESM(require_react(), 1);
+  var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
   function OneBottleOneCode() {
-    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>One Bottle One Code</h1><h2 style="color: #4a4a4a; font-weight: normal;">Integrated BC Marketing Platform Development</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3>Background</h3>\n<p>Traditional terminal marketing lacked clear touchpoints and user behavior data, resulting in inefficient advertising spend and poor targeting. The project had been stagnant for years.</p>\n<h3>Objective</h3>\n<p>Leverage a &quot;one bottle, one code&quot; campaign combined with terminal promotion to enable precise, multi-regional deployment. The goal was to increase GMV and repurchase rates, improve terminal data visualization, and enable user journey tracking and repurchase modeling.</p>\n<h3>Actions</h3>\n<ol>\n<li><strong>Led the marketing-side product management</strong> of the &quot;One Product, One Code&quot; system development and deployment. Designed business logic and interaction flow, and coordinated cross-functional teams including Production, IT, Branding, Legal, and Warehousing to build the traceable code platform.</li>\n<li><strong>Co-developed the data collection system</strong> with the engineering team to capture scan activity, defined behavioral indicators based on user traits, and designed backend modules for behavior analytics, lottery draw system, rewards store, real-time dashboards, and fraud risk controls.</li>\n<li><strong>Achieved over 500,000 code scans</strong> within 6 months post-launch, covering 80,000+ retail locations nationwide. Successfully broke through traditional distribution system data silos and enabled repurchase prediction models, enhancing flexible marketing strategies by region.</li>\n</ol>\n<p><img src="/assets/One-bottle-one-code/project1.png" alt="One Bottle One Code Digital Marketing System"></p>\n<h3>Results</h3>\n<ul>\n<li>Significantly improved user insight coverage.</li>\n<li>Achieved 90% accuracy in data path analysis.</li>\n<li>Delivered high-quality data input to support scaled distributor management, GMV growth on the consumer side, and company-wide digital transformation.</li>\n<li>First company in the seasoning industry to successfully implement and go live with a product-code traceability platform.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
+    return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { dangerouslySetInnerHTML: { __html: '<div style="padding: 9rem 4.5rem;"><h1>One Bottle One Code</h1><h2 style="color: #4a4a4a; font-weight: normal;">Integrated BC Marketing Platform Development</h2></div><div style="padding: 0 4.5rem 4.5rem;"><h3>Background</h3>\n<p>Traditional terminal marketing lacked clear touchpoints and user behavior data, resulting in inefficient advertising spend and poor targeting. The project had been stagnant for years.</p>\n<h3>Objective</h3>\n<p>Leverage a &quot;one bottle, one code&quot; campaign combined with terminal promotion to enable precise, multi-regional deployment. The goal was to increase GMV and repurchase rates, improve terminal data visualization, and enable user journey tracking and repurchase modeling.</p>\n<h3>Actions</h3>\n<ol>\n<li><strong>Led the marketing-side product management</strong> of the &quot;One Product, One Code&quot; system development and deployment. Designed business logic and interaction flow, and coordinated cross-functional teams including Production, IT, Branding, Legal, and Warehousing to build the traceable code platform.</li>\n<li><strong>Co-developed the data collection system</strong> with the engineering team to capture scan activity, defined behavioral indicators based on user traits, and designed backend modules for behavior analytics, lottery draw system, rewards store, real-time dashboards, and fraud risk controls.</li>\n<li><strong>Achieved over 500,000 code scans</strong> within 6 months post-launch, covering 80,000+ retail locations nationwide. Successfully broke through traditional distribution system data silos and enabled repurchase prediction models, enhancing flexible marketing strategies by region.</li>\n</ol>\n<p><img src="/assets/One-bottle-one-code/project1.png" alt="One Bottle One Code Digital Marketing System" class="mark-img" /></p>\n<h3>Results</h3>\n<ul>\n<li>Significantly improved user insight coverage.</li>\n<li>Achieved 90% accuracy in data path analysis.</li>\n<li>Delivered high-quality data input to support scaled distributor management, GMV growth on the consumer side, and company-wide digital transformation.</li>\n<li>First company in the seasoning industry to successfully implement and go live with a product-code traceability platform.</li>\n</ul>\n<h1>elaine</h1>\n</div>' } });
   }
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/pageMap.js
   var pageMap = {
     "/DigitalSmartBudgetSystem": DigitalSmartBudgetSystem,
     "/ERPSystem": ERPSystem,
+    "/GUIDEXAISkiCoach": GUIDEXAISkiCoach,
     "/OneBottleOneCode": OneBottleOneCode
   };
   var pageMap_default = pageMap;
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/template.jsx
-  var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
   function App() {
-    const [rawList, setRawList] = (0, import_react10.useState)([]);
-    const [filterCategory, setFilterCategory] = (0, import_react10.useState)("All");
-    const [sortOrder, setSortOrder] = (0, import_react10.useState)("Created");
-    const [columns, setColumns] = (0, import_react10.useState)(1);
-    (0, import_react10.useEffect)(() => {
+    const [rawList, setRawList] = (0, import_react11.useState)([]);
+    const [filterCategory, setFilterCategory] = (0, import_react11.useState)("All");
+    const [sortOrder, setSortOrder] = (0, import_react11.useState)("Created");
+    const [columns, setColumns] = (0, import_react11.useState)(1);
+    (0, import_react11.useEffect)(() => {
       fetch("./rawList.json").then((res) => res.json()).then(setRawList).catch((err) => console.error("Failed to load project list", err));
     }, []);
-    (0, import_react10.useEffect)(() => {
+    (0, import_react11.useEffect)(() => {
       const updateLayout = () => {
         const width = window.innerWidth;
         if (width >= 1360) setColumns(3);
@@ -22979,11 +22862,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       return rows;
     };
     const chunked = chunkProjects(rawList, columns);
-    return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(HashRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_react10.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { children: "Loading..." }), children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Routes, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(
+    return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(HashRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_react11.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { children: "Loading..." }), children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Routes, { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(
       Route,
       {
         path: "/",
-        element: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+        element: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
           Layout,
           {
             rawList,
@@ -22994,11 +22877,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           }
         ),
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
             Route,
             {
               index: true,
-              element: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(h2, { flipKey: columns, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "project-list", children: chunked.map((row, rowIndex) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "project-row", children: row.filter(
+              element: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(h2, { flipKey: columns, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "project-list", children: chunked.map((row, rowIndex) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "project-row", children: row.filter(
                 (project) => filterCategory === "All" || project.category === filterCategory
               ).sort((a3, b2) => {
                 if (sortOrder === "Created") {
@@ -23006,20 +22889,20 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                 } else {
                   return new Date(b2.updated) - new Date(a3.updated);
                 }
-              }).map((project) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(v2, { flipId: project.id, id: project.id, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ProjectCard, { project }) }, project.id)) }, rowIndex)) }) })
+              }).map((project) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(v2, { flipId: project.path, id: project.path, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(ProjectCard, { project }) }, project.path)) }, rowIndex)) }) })
             }
           ),
-          Object.entries(pageMap_default).map(([path, Comp]) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Route, { path, element: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Comp, {}) }, path))
+          Object.entries(pageMap_default).map(([path, Comp]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Route, { path, element: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Comp, {}) }, path))
         ]
       }
     ) }) }) });
   }
 
   // ../../../.nvm/versions/node/v23.1.0/lib/node_modules/portfolio-xs/src/index.js
-  var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
   var root = import_client.default.createRoot(document.getElementById("root"));
   root.render(
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(App, {})
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(App, {})
   );
 })();
 /*! Bundled license information:
@@ -23079,10 +22962,10 @@ react/cjs/react-jsx-runtime.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 
-react-router/dist/development/chunk-QMGIS6GS.mjs:
+react-router/dist/development/chunk-PVWAREVJ.mjs:
 react-router/dist/development/index.mjs:
   (**
-   * react-router v7.6.3
+   * react-router v7.8.2
    *
    * Copyright (c) Remix Software Inc.
    *

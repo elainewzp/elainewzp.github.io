@@ -18,6 +18,15 @@
     "updateDate": "2025-07-01"
   },
   {
+    "path": "/GUIDEXAISkiCoach",
+    "coverUrl": "",
+    "title": "GUIDEX-AI-ski-coach",
+    "description": "Artificial Intelligence Ski Coach Application",
+    "category": "General",
+    "createDate": "2025-09-07",
+    "updateDate": "2025-09-07"
+  },
+  {
     "path": "/OneBottleOneCode",
     "coverUrl": "./covers/OneBottleOneCode.png",
     "title": "One Bottle One Code",
