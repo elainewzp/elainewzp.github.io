@@ -1,5 +1,5 @@
 ---
-title: GUIDEX-AI-ski-coach
+title: GUIDEX AI ski coach
 description: Artificial Intelligence Ski Coach Application
 category: General
 createDate: 2025-09-07
@@ -17,6 +17,7 @@ Develop an AI-powered coaching app that analyzes user-uploaded ski videos, detec
 ![1331introduction2](./1331introduction2.png)
 
 
+
 ### **Actions**
 - Led end-to-end product lifecycle from requirement analysis to feature design, MLOps deployment, and launch of dual apps for users and coaches.
 
@@ -28,9 +29,9 @@ Develop an AI-powered coaching app that analyzes user-uploaded ski videos, detec
 
 - Designed scalable product architecture (personalized feedback for users + data management for coaches) and implemented a closed-loop feedback mechanism to enhance model performance and business value.
 
-
 ![1331tips](./1331tips.png)
 ![1331coach](./1331coach.png)
+
 
 ### **Results**
 - Successfully launched the first AI-based snowboard edge-switching guidance product with 70% model accuracy.
@@ -39,5 +40,3 @@ Develop an AI-powered coaching app that analyzes user-uploaded ski videos, detec
 
 - Pioneered a low-cost AI virtual coaching model, setting a new benchmark for scalable sports technology applications.
 
-
-# elaine

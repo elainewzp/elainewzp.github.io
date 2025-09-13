@@ -262,8 +262,8 @@ blockquote {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 40px;
-  margin-inline-end: 40px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   unicode-bidi: isolate;
   background-color: #f5f5f5;
   border-left: 5px solid #dbdbdb;

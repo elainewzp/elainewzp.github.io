@@ -1,5 +1,5 @@
 ---
-title: ERP-System-and-AI-Powdered Product Selection
+title: ERP System and AI Powdered Product Selection
 description: ERP System for Inventory and Sales management & AI-powdered Product Selection 
 category: General
 createDate: 2025-07-01
@@ -55,4 +55,3 @@ Establish a data-driven product selection system and utilize AI to assist in new
 - Achieved 20% profit margin on individual SKUs.
 
 
-# elaine
