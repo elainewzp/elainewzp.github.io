@@ -1,57 +1,31 @@
 ---
-title: ERP System and AI Powdered Product Selection
-description: ERP System for Inventory and Sales management & AI-powdered Product Selection 
+title: ERP Forcasting System
+description: ERP System for Sale-Inventory and Cash-flow management 
 category: General
 createDate: 2025-07-01
 updateDate: 2025-07-01
 ---
 
-### Background
-The original ERP system could not support accurate inventory forecasting or manage the cash flow cycle, leading to overstock and chaotic procurement rhythms. The manufacturing factories were unable to manage operations effectively.
+# Background
+>The traditional ERP system lacked the ability to generate accurate inventory forecasts or manage cash flow cycles effectively. This resulted in frequent overstocking, chaotic procurement schedules, and inefficiencies in manufacturing operations. Factories struggled to synchronize demand, sales, and capital flow, limiting overall business performance.
 
 
 
-### Objective
-Develop an ERP forecasting system that incorporates "payment cycle" logic to enable synchronized management of demand, sales, and capital flow.
+# Why do this
+>1. **Solve Inefficiencies**  the company needed an ERP forecasting system that could integrate the entire “Procurement–Warehousing–Sales–Payment” cycle into one predictive model.<br><br>
+>2. **Improve Forecast Accuracy**  to optimize inventory turnover, reduce costs, and ensure stable profit margins across product lines.<br><br>
+>3. **Better Management**  Advanced tools help managers manage their teams more effectively with clear personal KPIs and goals. Additionally, this prevents over-investment in products that are out of demand in the market.<br><br>
+
+
+# Actions
+
+>1. **Redesign ERP System**  Designed and implemented a linked ERP forecasting model that incorporated procurement, warehousing, sales, and payment collection, enabling rolling annual budget forecasting.<br><br>
+>2. **Time-series Product Management**  Applied time-series forecasting methods to analyze SKU- and region-level inventory turnover, identifying redundant stock and optimizing procurement planning.<br><br>
+>3. **Combine Cash-flow Cycle**  Upgraded the ERP framework with cash-flow cycle logic, integrating multiple data streams (procurement, inventory, sales, payment) into one predictive system for end-to-end visibility.<br><br>
 
 
 
-### Actions
-- Built a linked model for "Procurement–Warehousing–Sales–Payment Collection" and integrated it into the ERP system for rolling annual budget forecasting.
-- Modeled inventory turnover using time-series data at both regional and SKU levels to identify redundant stock.
-
-
-
-### Results
-- Improved inventory forecasting accuracy.
-- Reduced warehousing costs by 30%.
-- Controlled product profit margins between 20–30%.
-
-
----
-
-### **AI-Powered Product Selection and Brand Incubation System**
-
-### Background
-Product selection decisions were based on subjective judgment, and brand incubation lacked data support, resulting in inconsistent efficiency and success rates.
-
-
-
-### Objective
-Establish a data-driven product selection system and utilize AI to assist in new product entry and brand positioning.
-
-
-
-### Actions
-- Designed a product selection SOP incorporating multi-factor scoring models using warehousing turnover rate, ROI, and regional demand heat.
-- Built a popularity prediction model using Python to assist with SKU mix optimization.
-- Developed an NLP-based sentiment analysis model to interpret user reviews and differentiate competitors, aiding OEM strategy.
-
-![ERP system](./project34.png)
-
-### Results
-- Improved product selection efficiency by 30%.
-- Successfully launched 2 self-developed brands.
-- Achieved 20% profit margin on individual SKUs.
-
-
+# Results
+>- Improved forecast accuracy, enabling synchronized management of demand, sales, and capital flow
+>- Reduced warehousing costs by 30% through better inventory turnover control.
+>- Maintained stable profitability with controlled product margins between 20–30%.

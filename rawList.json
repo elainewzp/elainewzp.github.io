@@ -21,7 +21,7 @@
     "path": "/C_DigitalSmartBudgetSystem",
     "coverUrl": "./covers/C_DigitalSmartBudgetSystem.png",
     "title": "Digital Smart Budget System",
-    "description": "Intelligent Budget and Risk Control Management in CRM System",
+    "description": "Intelligent expense and Risk Control Management in CRM System",
     "category": "General",
     "createDate": "2025-07-01",
     "updateDate": "2025-07-01"
@@ -29,8 +29,8 @@
   {
     "path": "/D_ERPSystem",
     "coverUrl": "./covers/D_ERPSystem.png",
-    "title": "ERP System and AI Powdered Product Selection",
-    "description": "ERP System for Inventory and Sales management & AI-powdered Product Selection",
+    "title": "ERP Forcasting System",
+    "description": "ERP System for Sale-Inventory and Cash-flow management",
     "category": "General",
     "createDate": "2025-07-01",
     "updateDate": "2025-07-01"

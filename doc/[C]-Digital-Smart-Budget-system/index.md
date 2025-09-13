@@ -1,6 +1,6 @@
 ---
 title: Digital Smart Budget System
-description: Intelligent Budget and Risk Control Management in CRM System 
+description: Intelligent expense and Risk Control Management in CRM System 
 category: General
 createDate: 2025-07-01
 updateDate: 2025-07-01
@@ -19,15 +19,16 @@ updateDate: 2025-07-01
 >4. **Cost and Time Efficiency**  Reduce manual review time and costs while avoiding human error or bias in approval processes.<br><br>
 
 
-### Actions
+# Actions
 >1. **Receivables and Payment**  Integration Cleared historical receivables, introduced third-party payment platforms, and built a transaction risk feature library embedded into the approval workflow to enhance fund security and compliance.<br><br>
 >2. **Smart Budget Allocation**  Designed a promotional budget allocation algorithm and tracking mechanism to support year-round, category-based, and region-specific planning, enabling data-driven ROI optimization.<br><br>
->3. **Automated Risk**  Control Developed a machine learning–based risk identification system to automatically detect and block abnormal budget usage, preventing overspending and financial waste.<br><br>
->4. **Dashboard and Insights**  Built a real-time management dashboard to track budget execution, campaign ROI, and risk alerts, empowering regional marketing teams with independent operations and smarter decision-making.<br><br>
+![ec](./ec.png)
+3. **Automated Risk**  Control Developed a machine learning–based risk identification system to automatically detect and block abnormal budget usage, preventing overspending and financial waste.<br><br>
+4. **Dashboard and Insights**  Built a real-time management dashboard to track budget execution, campaign ROI, and risk alerts, empowering regional marketing teams with independent operations and smarter decision-making.<br>
 
 
 
-### Results
+# Results
 >- Approval efficiency improved from manual review to automatic processing within 5 minutes, with a 92% accuracy rate in document authenticity verification.<br><br>
 >- Resource utilization rate reached 90%, with zero complaints from marketing campaigns, enabling precise risk control and fund allocation across departments.<br><br>
 
