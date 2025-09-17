@@ -14,7 +14,7 @@ updateDate: 2025-07-01
 # Why do this
 
 >1. **Process Digitization**  Move budgeting, approval, and deployment online for easier operation, management, and record-keeping.<br><br>
->2. **Automatic Budget Monitoring**  Real-time comparison of campaign intensity versus budget limits to prevent overspending..<br><br>
+>2. **Automatic Budget Monitoring**  Real-time comparison of campaign intensity versus budget limits to prevent overspending.<br><br>
 >3. **Management Visibility**  Provide clear dashboards with actionable insights, serving as a critical tool for independent regional marketing operations.<br><br>
 >4. **Cost and Time Efficiency**  Reduce manual review time and costs while avoiding human error or bias in approval processes.<br><br>
 

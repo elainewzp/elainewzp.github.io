@@ -30,9 +30,7 @@ To address this gap, I envisioned an AI coaching system that offers immediate, e
 
 
 ### **Results**
-- Successfully launched the first AI-based snowboard edge-switching guidance product with 70% model accuracy.
-
-- Reduced user effort in motion comprehension by 90% and shortened learning cycles by 1–2 weeks.
-
-- Pioneered a low-cost AI virtual coaching model, setting a new benchmark for scalable sports technology applications.
+>- Successfully launched the first AI-based snowboard edge-switching guidance product with 70% model accuracy.<br><br>
+>- Reduced user effort in motion comprehension by 90% and shortened learning cycles by 1–2 weeks.<br><br>
+>- Pioneered a low-cost AI virtual coaching model, setting a new benchmark for scalable sports technology applications.
 
