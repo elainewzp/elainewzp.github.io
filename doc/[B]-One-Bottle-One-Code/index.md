@@ -40,10 +40,9 @@ updateDate:
 >4. **Marketing & Communication Standards** Oversaw campaign communication, including the design of standardized promotional materials and nationwide SOPs for the sales team, ensuring consistent product display and retail execution.<br><br>
 >5. **System Testing & National Launch** Directed full testing and rollout of the QR code system, and designed the “Light Salt Gold Rush” nationwide campaign, leveraging the Light Soy Sauce line to promote both the product and the digital system nationwide.
 
-![data](./data.png)
+![dataprocess](./dataprocess.png)
 
-
-
+![onground](./onground.png)
 
 # Results  
 >- Successfully launched the first traceable QR code platform in the seasoning industry, achieving 90% accuracy in data path analysis and providing high-quality inputs for distributor management and nationwide GMV growth.<br><br>
