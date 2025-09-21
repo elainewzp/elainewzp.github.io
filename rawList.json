@@ -9,8 +9,17 @@
     "updateDate": "2025-09-07"
   },
   {
-    "path": "/B_OneBottleOneCode",
-    "coverUrl": "./covers/B_OneBottleOneCode.png",
+    "path": "/B_GUIDEXPERT",
+    "coverUrl": "./covers/B_GUIDEXPERT.png",
+    "title": "GUIDEXPERT",
+    "description": "An Online ski coach application",
+    "category": "General",
+    "createDate": "2025-09-20",
+    "updateDate": "2025-09-20"
+  },
+  {
+    "path": "/C_OneBottleOneCode",
+    "coverUrl": "./covers/C_OneBottleOneCode.png",
     "title": "One Bottle One Code",
     "description": "Integrated BC Digital Marketing Platform Development",
     "category": "General",
@@ -18,8 +27,8 @@
     "updateDate": ""
   },
   {
-    "path": "/C_DigitalSmartBudgetSystem",
-    "coverUrl": "./covers/C_DigitalSmartBudgetSystem.png",
+    "path": "/D_DigitalSmartBudgetSystem",
+    "coverUrl": "./covers/D_DigitalSmartBudgetSystem.png",
     "title": "Digital Smart Budget System",
     "description": "Intelligent expense and Risk Control Management in CRM System",
     "category": "General",
@@ -27,8 +36,8 @@
     "updateDate": "2025-07-01"
   },
   {
-    "path": "/D_ERPSystem",
-    "coverUrl": "./covers/D_ERPSystem.png",
+    "path": "/E_ERPSystem",
+    "coverUrl": "./covers/E_ERPSystem.png",
     "title": "ERP Forcasting System",
     "description": "ERP System for Sale-Inventory and Cash-flow management",
     "category": "General",

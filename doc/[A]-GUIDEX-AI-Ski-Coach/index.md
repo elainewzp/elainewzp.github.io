@@ -23,9 +23,9 @@ To address this gap, I envisioned an AI coaching system that offers immediate, e
 >2. **Defined product vision and roadmap** Wrote PRD specifying MVP features, learning flows, and monetization strategies (membership + coach marketplace).<br><br>
 >3. **Built training dataset** Coordinated large-scale collection and labeling of skiing/snowboarding videos, aligning annotations with CASI/CISA/AASI/BASI/JSBA  professional standards for model training.<br><br>
 >4. **Bridged product and engineering**  Worked closely with developers to translate user scenarios into functional requirements, ensuring AI analysis and feedback aligned with user needs and business goals.<br><br>
->5. **STested and iterated post-development** Oversaw beta testing with early users and coaches, measured model accuracy and usability, and refined features to improve adoption and scalability.<br>
+>5. **Tested and iterated post-development** Oversaw beta testing with early users and coaches, measured model accuracy and usability, and refined features to improve adoption and scalability.<br>
 
-![guidex](./guidex.png)
+
 ![1331tips](./1331tips.png)
 
 
@@ -33,4 +33,3 @@ To address this gap, I envisioned an AI coaching system that offers immediate, e
 >- Successfully launched the first AI-based snowboard edge-switching guidance product with 70% model accuracy.<br><br>
 >- Reduced user effort in motion comprehension by 90% and shortened learning cycles by 1–2 weeks.<br><br>
 >- Pioneered a low-cost AI virtual coaching model, setting a new benchmark for scalable sports technology applications.
-
