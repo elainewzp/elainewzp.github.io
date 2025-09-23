@@ -13,10 +13,8 @@ updateDate: 2025-09-20
 # **Why do this**
 >As both a skiing enthusiast and product manager, I identified the dual-sided pain points: learners need more immediate and affordable guidance, while coaches require a more stable and scalable income stream. <br><br>To address this, I designed an AI + human hybrid coaching platform that offers membership-based access to certified coaches for learners, and provides coaches with a simple, actionable tool to deliver online lessons, showcase certifications, and monetize their expertise. This creates a sustainable two-sided value network connecting coaches and learners.
 
-
-
-![1331introduction](./1331introduction.png)
-
+![challenge](./challenge.png)
+![solution](./solution.png)
 
 # **Actions**
 >1. **User research with certified coaches** Conducted in-depth interviews with professional ski/snowboard coaches to identify unmet needs such as unstable scheduling, lack of consistent student flow, and limited income opportunities during off-season.<br><br>
@@ -24,8 +22,7 @@ updateDate: 2025-09-20
 >3. **Bridged product and engineering** Translated coach-side business requirements (lesson scheduling, student management, income tracking) into AI product features, driving implementation with the engineering team and increasing business value in the market.<br><br>
 >4. **Testing and iteration**  Oversaw beta testing with early coaches, gathered feedback on usability, refined platform features, and optimized model precision to improve adoption and monetization potential for coaches.<br><br>
 
-![guidex](./guidex.png)
-![1331tips](./1331tips.png)
+![action](./action.png)
 
 
 ### **Results**
