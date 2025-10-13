@@ -25,9 +25,9 @@ To address this gap, I envisioned an AI coaching system that offers immediate, e
 >4. **Bridged product and engineering**  Worked closely with developers to translate user scenarios into functional requirements, ensuring AI analysis and feedback aligned with user needs and business goals.<br><br>
 >5. **Tested and iterated post-development** Oversaw beta testing with early users and coaches, measured model accuracy and usability, and refined features to improve adoption and scalability.<br>
 
-
+![demo](./demo.mp4)
 ![1331tips](./1331tips.png)√√
-![demo](.demo.MP4)
+
 
 ### **Results**
 >- Successfully launched the first AI-based snowboard edge-switching guidance product with 70% model accuracy.<br><br>
